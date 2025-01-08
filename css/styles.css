@@ -153,3 +153,40 @@ header {
 #projects .container {
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
 }
+
+/* Contact form styles */
+.form-group input,
+.form-group textarea {
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #8B5CF6; /* Purple-500 */
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9CA3AF; /* Gray-400 */
+}
+
+/* Prevent autofill background color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+    -webkit-text-fill-color: #fff;
+    -webkit-box-shadow: 0 0 0px 1000px #1a1a1a inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Add this when you have your background image */
+#home {
+    background-image: url('path/to/your/image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize particles for all sections
     const particleIds = [
         'particles',
+        'particles-home',
         'particles-summary',
         'particles-education',
         'particles-skills',
@@ -145,5 +146,34 @@ document.addEventListener('DOMContentLoaded', function() {
         item.style.transform = 'translateX(-20px)';
         item.style.transition = 'all 0.5s ease-out';
         observer.observe(item);
+    });
+
+    // Add this to handle form submissions
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const form = e.target;
+        const data = new FormData(form);
+        
+        fetch(form.action, {
+            method: 'POST',
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                // Clear form
+                form.reset();
+                // Show success message
+                alert('Message sent successfully!');
+            } else {
+                throw new Error('Error sending message');
+            }
+        })
+        .catch(error => {
+            alert('Error sending message. Please try again.');
+            console.error(error);
+        });
     });
 });
