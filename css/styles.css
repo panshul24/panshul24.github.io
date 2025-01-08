@@ -190,3 +190,97 @@ textarea:-webkit-autofill:focus {
     background-position: center;
     background-repeat: no-repeat;
 }
+
+/* Wave animation */
+.wave {
+    animation: wave 2.5s infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+}
+
+@keyframes wave {
+    0% { transform: rotate( 0.0deg) }
+    10% { transform: rotate(14.0deg) }
+    20% { transform: rotate(-8.0deg) }
+    30% { transform: rotate(14.0deg) }
+    40% { transform: rotate(-4.0deg) }
+    50% { transform: rotate(10.0deg) }
+    60% { transform: rotate( 0.0deg) }
+    100% { transform: rotate( 0.0deg) }
+}
+
+/* Profile image styles */
+#summary img {
+    transition: transform 0.3s ease;
+    filter: grayscale(20%);
+}
+
+#summary img:hover {
+    transform: scale(1.02);
+    filter: grayscale(0%);
+}
+
+/* Center image and line for mobile */
+@media (max-width: 768px) {
+    #summary .container {
+        padding: 1rem;
+    }
+    
+    #summary .w-64 {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Education section styles */
+#education img {
+    filter: brightness(0) invert(1); /* Make logos white */
+    transition: filter 0.3s ease;
+}
+
+#education img:hover {
+    filter: brightness(1) invert(0); /* Return to original color on hover */
+}
+
+#education .container {
+    max-width: 1200px;
+}
+
+@media (max-width: 768px) {
+    #education .flex-col {
+        gap: 2rem;
+    }
+    
+    #education .w-24 {
+        width: 4rem;
+    }
+}
+
+/* Education section styles */
+#education .uiuc-logo {
+    filter: none;
+    max-width: 100%;
+    height: auto;
+}
+
+#education .srm-logo {
+    filter: brightness(0) invert(1);
+    max-width: 100%;
+    height: auto;
+}
+
+/* Remove hover effects */
+#education img:hover {
+    transform: none;
+}
+
+/* Update mobile responsiveness */
+@media (max-width: 768px) {
+    #education .flex-col {
+        gap: 2rem;
+    }
+    
+    #education .w-48 {
+        width: 8rem;
+    }
+}
