@@ -1,0 +1,155 @@
+/* General styles */
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Section styles */
+.section {
+    min-height: 100vh;
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    transition: all 0.8s ease;
+    height: 100vh !important;
+    overflow: hidden;
+    padding-top: 100px;
+}
+
+/* Timeline styles */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline-content {
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateX(10px);
+}
+
+/* Project card styles */
+.project-card {
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Link styles */
+a {
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 10;
+}
+
+/* Particle background */
+#particles, 
+#particles-summary,
+#particles-education,
+#particles-skills,
+#particles-experience,
+#particles-projects,
+#particles-leadership,
+#particles-contact {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Container responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+/* Pagination dots container */
+.pagination {
+    position: fixed;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 50;
+}
+
+/* Active dot state */
+.pagination .active {
+    background-color: #3b82f6; /* blue-500 */
+    transform: scale(1.2);
+}
+
+/* Adjust container for better section content alignment */
+.section .container {
+    max-height: 100vh;
+    overflow-y: auto;
+    padding: 2rem;
+    scrollbar-width: thin;
+    scrollbar-color: #4a5568 transparent;
+}
+
+/* Scrollbar styling */
+.section .container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.section .container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.section .container::-webkit-scrollbar-thumb {
+    background-color: #4a5568;
+    border-radius: 3px;
+}
+
+/* Optional: Add a background blur effect to the header */
+header {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+/* Special styling for experience and projects sections */
+#experience .container,
+#projects .container {
+    max-height: calc(100vh - 120px); /* Account for header and some padding */
+    overflow-y: auto;
+    padding: 2rem;
+    scrollbar-width: thin;
+    scrollbar-color: #4a5568 transparent;
+    margin-top: 20px;
+}
+
+/* Scrollbar styling for experience and projects sections */
+#experience .container::-webkit-scrollbar,
+#projects .container::-webkit-scrollbar {
+    width: 6px;
+}
+
+#experience .container::-webkit-scrollbar-track,
+#projects .container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#experience .container::-webkit-scrollbar-thumb,
+#projects .container::-webkit-scrollbar-thumb {
+    background-color: #4a5568;
+    border-radius: 3px;
+}
+
+/* Ensure content is properly spaced */
+#experience .container,
+#projects .container {
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
