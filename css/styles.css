@@ -3,18 +3,22 @@ body {
     background-color: #1a1a1a;
     color: #ffffff;
     font-family: 'Inter', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* Section styles */
 .section {
     min-height: 100vh;
-    padding: 80px 0;
+    padding: 20px 0;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     transition: all 0.8s ease;
     height: 100vh !important;
     overflow: hidden;
     padding-top: 100px;
+    will-change: transform; /* Optimize animations */
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
 
 /* Timeline styles */
@@ -226,9 +230,9 @@ textarea:-webkit-autofill:focus {
         padding: 1rem;
     }
     
-    #summary .w-64 {
-        width: 200px;
-        height: 200px;
+    #summary .w-72 {
+        width: 280px;
+        height: 280px;
     }
 }
 
@@ -257,30 +261,274 @@ textarea:-webkit-autofill:focus {
 }
 
 /* Education section styles */
+#education .container {
+    max-width: 1200px;
+}
+
+/* Card styles */
+#education .bg-gray-800\/50 {
+    transition: transform 0.3s ease;
+}
+
+#education .bg-gray-800\/50:hover {
+    transform: translateY(-5px);
+}
+
+/* Logo styles */
 #education .uiuc-logo {
     filter: none;
     max-width: 100%;
     height: auto;
+    object-fit: cover;
 }
 
 #education .srm-logo {
-    filter: brightness(0) invert(1);
+    background-color: white;
     max-width: 100%;
     height: auto;
+    object-fit: contain;
+    padding: 1rem;
 }
 
-/* Remove hover effects */
+/* Remove all previous logo-related styles */
+#education img,
 #education img:hover {
+    filter: none;
     transform: none;
 }
 
-/* Update mobile responsiveness */
+/* Mobile responsiveness */
 @media (max-width: 768px) {
     #education .flex-col {
         gap: 2rem;
     }
     
-    #education .w-48 {
-        width: 8rem;
+    #education .md\:w-\[400px\] {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
     }
 }
+
+/* Smooth scrolling optimizations */
+body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Prevent unwanted animations during scroll */
+body.is-scrolling * {
+    pointer-events: none;
+}
+
+/* Optimize particle animations */
+#particles-js canvas {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* Adjust About Me section specific spacing */
+#summary .container {
+    padding-top: 0;
+    margin-top: 30px;
+}
+
+/* Keep Education section spacing as is */
+#education .container {
+    padding-top: 2rem;
+    margin-top: 60px;
+}
+
+/* Adjust section padding for About Me specifically */
+#summary.section {
+    padding-top: 80px;
+}
+
+/* Skills section specific styles */
+.skill-category {
+    transition: all 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateX(5px);
+}
+
+.certification-item {
+    transition: all 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #skills .container {
+        padding: 1rem;
+    }
+    
+    .skill-category .flex {
+        justify-content: flex-start;
+    }
+}
+
+/* Experience section styles */
+#experience .container {
+    max-width: 1200px;
+}
+
+#experience .bg-gray-800\/50 {
+    transition: transform 0.3s ease;
+}
+
+#experience .bg-gray-800\/50:hover {
+    transform: translateY(-5px);
+}
+
+/* Company logo styles */
+#experience img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    #experience .container {
+        padding: 1rem;
+    }
+    
+    #experience .grid {
+        gap: 2rem;
+    }
+}
+
+/* Experience timeline styles */
+#experience .relative::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: #3b82f6;
+}
+
+#experience .flex::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: #3b82f6;
+    border-radius: 50%;
+    margin-top: 0.5rem;
+    border: 2px solid #1a1a1a;
+}
+
+/* Content alignment */
+#experience .w-[45%] {
+    width: 35%;
+}
+
+/* Increase negative margins to pull content closer */
+#experience div[class*="mr-[-"] {
+    margin-right: -34rem;
+}
+
+#experience div[class*="ml-[-"] {
+    margin-left: -34rem;
+}
+
+/* Add negative margins for left side images */
+#experience .h-16.bg-white {
+    margin-right: -34rem;
+}
+
+/* Adjust right side images to align with text */
+#experience .w-[45%]:last-child .h-16.bg-white {
+    margin-left: -34rem;
+    position: relative;
+    right: 26rem;
+    margin-left: 8rem;
+}
+
+/* Specific adjustments for company logos */
+#experience img[alt="DPI"],
+#experience img[alt="Capgemini"],
+#experience img[alt="Bharat Electronics"] {
+    margin-left: 0rem;
+}
+
+/* Keep text aligned with center line */
+#experience .text-right {
+    padding-right: 0;
+}
+
+#experience .text-left {
+    padding-left: 0;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    #experience div[class*="mr-[-"],
+    #experience div[class*="ml-[-"],
+    #experience .h-16.bg-white,
+    #experience .w-[45%]:last-child .h-16.bg-white {
+        margin: 0;
+        right: 0;
+    }
+}
+
+/* Title and tenure spacing */
+.timeline-content h4.title {
+    margin-bottom: 0.25rem;
+}
+
+.timeline-content h5 {
+    margin-bottom: 0.5rem;
+}
+
+/* Timeline dots positioning */
+.timeline-content:before {
+    width: 8px;
+    height: 8px;
+    top: 15px;
+}
+
+.timeline-content.left:before {
+    right: -4px;
+}
+
+.timeline-content.right:before {
+    left: -4px;
+}
+
+/* Spacing between experiences */
+#experience .space-y-24 > * + * {
+    margin-top: 5rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    #experience .flex {
+        flex-direction: column !important;
+        gap: 2rem;
+    }
+    
+    #experience .w-[45%] {
+        width: 100%;
+    }
+    
+    #experience .flex-col.items-end {
+        align-items: flex-start;
+    }
+    
+    #experience .text-right {
+        text-align: left;
+    }
+    
+    #experience .max-w-sm {
+        max-width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+

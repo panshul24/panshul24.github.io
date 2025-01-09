@@ -76,22 +76,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Initialize Scrollify
+    // Initialize Scrollify with optimized settings
     $.scrollify({
         section: ".section",
-        scrollSpeed: 1100,
+        scrollSpeed: 1500,
         offset: 0,
-        scrollbars: true,
+        scrollbars: false,
         standardScrollElements: "#experience .container, #projects .container",
-        setHeights: true,
+        setHeights: false,
         overflowScroll: true,
         updateHash: true,
         touchScroll: true,
-        before: function() {
-            // You can add animations before section change
+        easing: "easeOutExpo",
+        before: function(i, sections) {
+            document.body.classList.add('is-scrolling');
         },
         after: function(i, sections) {
-            // Update navigation active state
             const links = document.querySelectorAll('nav a');
             links.forEach(link => link.classList.remove('text-blue-500'));
             const activeSection = sections[i];
@@ -99,8 +99,20 @@ document.addEventListener('DOMContentLoaded', function() {
             if (activeLink) {
                 activeLink.classList.add('text-blue-500');
             }
+            document.body.classList.remove('is-scrolling');
         }
     });
+
+    // Optimize scroll performance
+    let scrollTimeout;
+    window.addEventListener('scroll', function() {
+        if (!scrollTimeout) {
+            requestAnimationFrame(function() {
+                scrollTimeout = null;
+            });
+        }
+        scrollTimeout = setTimeout(function() {}, 66);
+    }, false);
 
     // Add pagination dots
     const sections = document.querySelectorAll('.section');
