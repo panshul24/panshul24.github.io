@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize Scrollify with optimized settings
     $.scrollify({
         section: ".section",
-        scrollSpeed: 1500,
+        scrollSpeed: 400,
         offset: 0,
         scrollbars: false,
         standardScrollElements: "#experience .container, #projects .container",
