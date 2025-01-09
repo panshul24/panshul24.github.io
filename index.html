@@ -20,7 +20,7 @@
                     <li><a href="#home" class="hover:text-blue-500">Home</a></li>
                     <li><a href="#summary" class="hover:text-blue-500">About Me</a></li>
                     <li><a href="#education" class="hover:text-blue-500">Education</a></li>
-                    <li><a href="#skills" class="hover:text-blue-500">Skills</a></li>
+                    <li><a href="#skills" class="hover:text-blue-500">Expertise & Skills</a></li>
                     <li><a href="#experience" class="hover:text-blue-500">Experience</a></li>
                     <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
                     <li><a href="#leadership" class="hover:text-blue-500">Leadership</a></li>
@@ -120,64 +120,110 @@
     
     <div class="section" id="skills">
         <div id="particles-skills" class="fixed top-0 left-0 w-full h-full -z-10"></div>
-        <div class="container mx-auto py-20">
-            <h2 class="text-4xl font-semibold mb-12 text-center">Skills & Certifications</h2>
+        <div class="container mx-auto px-4 py-10">
+            <h2 class="text-4xl font-semibold mb-8 text-center">Expertise & Skills</h2>
             
-            <!-- Skills Section -->
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Technical Skills -->
-                <div class="bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm">
-                    <h3 class="text-2xl font-semibold mb-6 text-blue-400">Technical Skills</h3>
-                    <div class="space-y-4">
-                        <div class="skill-category">
-                            <h4 class="text-lg font-medium mb-2 text-gray-300">Programming & Databases</h4>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-blue-500/20 rounded-full text-blue-400">Python</span>
-                                <span class="px-3 py-1 bg-blue-500/20 rounded-full text-blue-400">SQL</span>
-                                <span class="px-3 py-1 bg-blue-500/20 rounded-full text-blue-400">R</span>
-                                <span class="px-3 py-1 bg-blue-500/20 rounded-full text-blue-400">MongoDB</span>
-                                <span class="px-3 py-1 bg-blue-500/20 rounded-full text-blue-400">PostgreSQL</span>
-                            </div>
+            <!-- Areas of Expertise -->
+            <div class="bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-blue-400">Areas of Expertise</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <div class="bg-blue-500/20 rounded-lg p-3 text-center w-[180px]">
+                        <p class="text-white">Python Programming</p>
+                    </div>
+                    <div class="bg-blue-500/20 rounded-lg p-3 text-center w-[180px]">
+                        <p class="text-white">SQL</p>
+                    </div>
+                    <div class="bg-blue-500/20 rounded-lg p-3 text-center w-[180px]">
+                        <p class="text-white">Data Science</p>
+                    </div>
+                    <div class="bg-blue-500/20 rounded-lg p-3 text-center w-[180px]">
+                        <p class="text-white">Data Analysis</p>
+                    </div>
+                    <div class="bg-blue-500/20 rounded-lg p-3 text-center w-[180px]">
+                        <p class="text-white">Machine Learning</p>
+                    </div>
+                    <div class="bg-blue-500/20 rounded-lg p-3 text-center w-[180px]">
+                        <p class="text-white">Data Visualisation</p>
+                    </div>
+                    <div class="bg-blue-500/20 rounded-lg p-3 text-center w-[180px]">
+                        <p class="text-white">Data Engineering</p>
+                    </div>
+                    <div class="bg-blue-500/20 rounded-lg p-3 text-center w-[180px]">
+                        <p class="text-white">NLP</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm">
+                <h3 class="text-2xl font-semibold mb-6 text-blue-400">Tech Stack</h3>
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Data Science and ML -->
+                    <div>
+                        <h4 class="text-lg font-medium text-white mb-3">Data Science and ML</h4>
+                        <div class="bg-white rounded-lg w-[320px] h-[220px] flex items-center justify-center p-4">
+                            <img src="assets/ML.webp" 
+                                 alt="Data Science and ML Stack" 
+                                 class="w-full h-full object-contain transform transition-all duration-300 hover:scale-110">
                         </div>
-                        <div class="skill-category">
-                            <h4 class="text-lg font-medium mb-2 text-gray-300">Cloud & Big Data</h4>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-blue-500/20 rounded-full text-blue-400">AWS</span>
-                                <span class="px-3 py-1 bg-blue-500/20 rounded-full text-blue-400">Azure</span>
-                                <span class="px-3 py-1 bg-blue-500/20 rounded-full text-blue-400">GCP</span>
-                                <span class="px-3 py-1 bg-blue-500/20 rounded-full text-blue-400">Hadoop</span>
-                                <span class="px-3 py-1 bg-blue-500/20 rounded-full text-blue-400">Spark</span>
-                            </div>
+                    </div>
+
+                    <!-- Software Development -->
+                    <div>
+                        <h4 class="text-lg font-medium text-white mb-3">Software Development</h4>
+                        <div class="bg-white rounded-lg w-[320px] h-[220px] flex items-center justify-center p-4">
+                            <img src="assets/Software devlopment.png" 
+                                 alt="Software Development Stack" 
+                                 class="w-full h-full object-contain transform transition-all duration-300 hover:scale-110">
                         </div>
-                        <div class="skill-category">
-                            <h4 class="text-lg font-medium mb-2 text-gray-300">Data Analysis Tools</h4>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-blue-500/20 rounded-full text-blue-400">Tableau</span>
-                                <span class="px-3 py-1 bg-blue-500/20 rounded-full text-blue-400">Excel</span>
-                                <span class="px-3 py-1 bg-blue-500/20 rounded-full text-blue-400">Pandas</span>
-                                <span class="px-3 py-1 bg-blue-500/20 rounded-full text-blue-400">NumPy</span>
-                            </div>
+                    </div>
+
+                    <!-- Cloud and Databases -->
+                    <div>
+                        <h4 class="text-lg font-medium text-white mb-3">Cloud and Databases</h4>
+                        <div class="bg-white rounded-lg w-[320px] h-[220px] flex items-center justify-center p-4">
+                            <img src="assets/Clouddb.png" 
+                                 alt="Cloud and Databases Stack" 
+                                 class="w-full h-full object-contain transform transition-all duration-300 hover:scale-110">
+                        </div>
+                    </div>
+
+                    <!-- Data Visualisation -->
+                    <div>
+                        <h4 class="text-lg font-medium text-white mb-3">Data Visualisation</h4>
+                        <div class="bg-white rounded-lg w-[320px] h-[220px] flex items-center justify-center p-4">
+                            <img src="assets/datavizyools.png" 
+                                 alt="Data Visualization Stack" 
+                                 class="w-full h-full object-contain transform transition-all duration-300 hover:scale-110">
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
 
-                <!-- Certifications -->
-                <div class="bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm">
-                    <h3 class="text-2xl font-semibold mb-6 text-purple-400">Certifications</h3>
-                    <div class="space-y-4">
-                        <div class="certification-item p-4 bg-gray-700/50 rounded-lg hover:transform hover:scale-[1.02] transition-all">
-                            <h4 class="font-semibold text-purple-300">Microsoft Azure Fundamentals</h4>
-                            <p class="text-sm text-gray-400">Microsoft</p>
-                        </div>
-                        <div class="certification-item p-4 bg-gray-700/50 rounded-lg hover:transform hover:scale-[1.02] transition-all">
-                            <h4 class="font-semibold text-purple-300">KNIME Analytics Platform</h4>
-                            <p class="text-sm text-gray-400">Basic Proficiency</p>
-                        </div>
-                        <div class="certification-item p-4 bg-gray-700/50 rounded-lg hover:transform hover:scale-[1.02] transition-all">
-                            <h4 class="font-semibold text-purple-300">Inferential and Predictive Statistics for Business</h4>
-                            <p class="text-sm text-gray-400">Business Analytics</p>
-                        </div>
-                    </div>
+    <!-- Certifications Section -->
+    <div class="section" id="certifications">
+        <div id="particles-certifications" class="fixed top-0 left-0 w-full h-full -z-10"></div>
+        <div class="container mx-auto px-4 py-10">
+            <h2 class="text-4xl font-semibold mb-8 text-center">Certifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="certification-item bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm transform transition-all duration-300 hover:scale-105 hover:bg-gray-700/50">
+                    <h4 class="text-xl font-semibold text-white mb-2">Microsoft Azure Fundamentals</h4>
+                    <p class="text-gray-400">Microsoft</p>
+                    <p class="text-gray-300 mt-4">Cloud computing concepts, core Azure services, security, privacy, compliance, trust, and pricing and support</p>
+                </div>
+                
+                <div class="certification-item bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm transform transition-all duration-300 hover:scale-105 hover:bg-gray-700/50">
+                    <h4 class="text-xl font-semibold text-white mb-2">KNIME Analytics Platform</h4>
+                    <p class="text-gray-400">Basic Proficiency</p>
+                    <p class="text-gray-300 mt-4">Data analytics, machine learning, and data visualization using the KNIME platform</p>
+                </div>
+                
+                <div class="certification-item bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm transform transition-all duration-300 hover:scale-105 hover:bg-gray-700/50">
+                    <h4 class="text-xl font-semibold text-white mb-2">Inferential and Predictive Statistics</h4>
+                    <p class="text-gray-400">Business Analytics</p>
+                    <p class="text-gray-300 mt-4">Statistical analysis, hypothesis testing, regression analysis, and predictive modeling for business decisions</p>
                 </div>
             </div>
         </div>
