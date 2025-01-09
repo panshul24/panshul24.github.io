@@ -666,3 +666,83 @@ body.is-scrolling * {
     overflow: hidden;
 }
 
+/* Projects section styles */
+#projects .container {
+    max-width: 1280px;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(59, 130, 246, 0.5) rgba(17, 24, 39, 0.1);
+}
+
+#projects .container::-webkit-scrollbar {
+    width: 6px;
+}
+
+#projects .container::-webkit-scrollbar-track {
+    background: rgba(17, 24, 39, 0.1);
+    border-radius: 4px;
+}
+
+#projects .container::-webkit-scrollbar-thumb {
+    background: rgba(59, 130, 246, 0.5);
+    border-radius: 4px;
+}
+
+#projects .container::-webkit-scrollbar-thumb:hover {
+    background: rgba(59, 130, 246, 0.7);
+}
+
+/* Project card styles */
+#projects .bg-gray-800 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#projects .bg-gray-800:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Project image styles */
+#projects .h-48 {
+    position: relative;
+    overflow: hidden;
+}
+
+#projects .h-48 img {
+    transition: transform 0.3s ease;
+}
+
+#projects .h-48:hover img {
+    transform: scale(1.05);
+}
+
+/* Project content styles */
+#projects .p-6 {
+    background: linear-gradient(to bottom, rgba(31, 41, 55, 0.8), rgba(31, 41, 55, 1));
+}
+
+/* GitHub button styles */
+#projects .bg-blue-600 {
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+
+#projects .bg-blue-600:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #projects .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    #projects .container {
+        padding: 1rem;
+    }
+}
+

@@ -426,98 +426,159 @@
         <div id="particles-projects" class="fixed top-0 left-0 w-full h-full -z-10"></div>
         <div class="container mx-auto py-40">
             <h2 class="text-4xl font-semibold mb-6">Academic Projects</h2>
-            <ul class="space-y-8">
-                <li class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold text-white mb-2">Real-Time NBA Data Analytics Pipeline</h3>
-                    <a href="https://github.com/panshul24/Real-Time-NBA-Data-Analytics-Pipeline" 
-                       onclick="window.open(this.href, '_blank'); return false;"
-                       class="inline-flex items-center text-blue-400 hover:text-blue-300 mb-2 underline cursor-pointer">
-                        <span>View on GitHub</span>
-                        <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
-                            <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
-                        </svg>
-                    </a>
-                    <p class="text-gray-300">Developed a data pipeline using Apache Kafka, Apache Spark, and InfluxDB to analyze live NBA game statistics. Created interactive Grafana dashboards for real-time updates and insights, boosting fan engagement and supporting gameplay decisions.</p>
-                </li>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gray-700 relative overflow-hidden">
+                        <img src="assets/nba-analytics.jpg" alt="NBA Analytics" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-4">Real-Time NBA Data Analytics Pipeline</h3>
+                        <p class="text-gray-300 mb-6">Developed a data pipeline using Apache Kafka, Apache Spark, and InfluxDB to analyze live NBA game statistics. Created interactive Grafana dashboards for real-time updates and insights, boosting fan engagement and supporting gameplay decisions.</p>
+                        <a href="https://github.com/panshul24/Real-Time-NBA-Data-Analytics-Pipeline" 
+                           class="inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
 
-                <li class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold text-white mb-2">Statistical Modeling for Property Valuation</h3>
-                    <a href="https://github.com/panshul24/Statistical-Modeling-for-Property-Valuation" 
-                       class="inline-block text-blue-400 hover:text-blue-300 mb-2 underline"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        View on GitHub →
-                    </a>
-                    <p class="text-gray-300">Conducted data cleaning to handle missing values, outliers, and inconsistencies, and identified factors influencing housing prices. Used Lasso regression to predict housing prices, achieving an accuracy of 92%.</p>
-                </li>
+                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gray-700 relative overflow-hidden">
+                        <img src="assets/property-valuation.jpg" alt="Property Valuation" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-4">Statistical Modeling for Property Valuation</h3>
+                        <p class="text-gray-300 mb-6">Conducted data cleaning to handle missing values, outliers, and inconsistencies, and identified factors influencing housing prices. Used Lasso regression to predict housing prices, achieving an accuracy of 92%.</p>
+                        <a href="https://github.com/panshul24/Statistical-Modeling-for-Property-Valuation" 
+                           class="inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
 
-                <li class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold text-white mb-2">Visual Analytics for Blockchain Sales</h3>
-                    <a href="https://github.com/panshul24/Visual-Analytics-for-Blockchain-Sales" 
-                       class="inline-block text-blue-400 hover:text-blue-300 mb-2 underline"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        View on GitHub →
-                    </a>
-                    <p class="text-gray-300">Developed visual analytics tools to track and analyze blockchain sales data, providing insights into market trends and sales performance.</p>
-                </li>
+                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gray-700 relative overflow-hidden">
+                        <img src="assets/blockchain-analytics.jpg" alt="Blockchain Analytics" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-4">Visual Analytics for Blockchain Sales</h3>
+                        <p class="text-gray-300 mb-6">Developed visual analytics tools to track and analyze blockchain sales data, providing insights into market trends and sales performance.</p>
+                        <a href="https://github.com/panshul24/Visual-Analytics-for-Blockchain-Sales" 
+                           class="inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
 
-                <li class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold text-white mb-2">Yelp Dataset ETL and Analysis</h3>
-                    <a href="https://github.com/panshul24/Yelp-Dataset-ETL-and-Analysis" 
-                       class="inline-block text-blue-400 hover:text-blue-300 mb-2 underline"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        View on GitHub →
-                    </a>
-                    <p class="text-gray-300">Implemented an ETL process to extract, transform, and load Yelp data for analysis, providing insights into customer reviews and business performance.</p>
-                </li>
+                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gray-700 relative overflow-hidden">
+                        <img src="assets/yelp-analysis.jpg" alt="Yelp Analysis" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-4">Yelp Dataset ETL and Analysis</h3>
+                        <p class="text-gray-300 mb-6">Implemented an ETL process to extract, transform, and load Yelp data for analysis, providing insights into customer reviews and business performance.</p>
+                        <a href="https://github.com/panshul24/Yelp-Dataset-ETL-and-Analysis" 
+                           class="inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
 
-                <li class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold text-white mb-2">Cloud-Optimized Data Ecosystem Project Integration</h3>
-                    <a href="https://github.com/panshul24/Cloud-Optimized-Data-Ecosystem-Project-Integration" 
-                       class="inline-block text-blue-400 hover:text-blue-300 mb-2 underline"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        View on GitHub →
-                    </a>
-                    <p class="text-gray-300">Implemented scalable MongoDB clusters on the cloud for efficient data storage and management. Integrated Yelp data from Kaggle and real-time NFT sales data from Flipside via a Python API, improving data-driven decision-making by 30%.</p>
-                </li>
+                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gray-700 relative overflow-hidden">
+                        <img src="assets/cloud-ecosystem.jpg" alt="Cloud Ecosystem" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-4">Cloud-Optimized Data Ecosystem Project Integration</h3>
+                        <p class="text-gray-300 mb-6">Implemented scalable MongoDB clusters on the cloud for efficient data storage and management. Integrated Yelp data from Kaggle and real-time NFT sales data from Flipside via a Python API, improving data-driven decision-making by 30%.</p>
+                        <a href="https://github.com/panshul24/Cloud-Optimized-Data-Ecosystem-Project-Integration" 
+                           class="inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
 
-                <li class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold text-white mb-2">Determining the Success of an IPO</h3>
-                    <a href="https://github.com/panshul24/Determining-the-Success-of-an-IPO" 
-                       class="inline-block text-blue-400 hover:text-blue-300 mb-2 underline"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        View on GitHub →
-                    </a>
-                    <p class="text-gray-300">Analyzed factors contributing to the success of IPOs using historical data and statistical models to predict future performance.</p>
-                </li>
+                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gray-700 relative overflow-hidden">
+                        <img src="assets/ipo-analysis.jpg" alt="IPO Analysis" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-4">Determining the Success of an IPO</h3>
+                        <p class="text-gray-300 mb-6">Analyzed factors contributing to the success of IPOs using historical data and statistical models to predict future performance.</p>
+                        <a href="https://github.com/panshul24/Determining-the-Success-of-an-IPO" 
+                           class="inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
 
-                <li class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold text-white mb-2">Discovery Partner Institute (DPI)</h3>
-                    <a href="https://github.com/panshul24/Discovery-Partner-Institute-DPI-" 
-                       class="inline-block text-blue-400 hover:text-blue-300 mb-2 underline"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        View on GitHub →
-                    </a>
-                    <p class="text-gray-300">Developed tools for project and grant tracking, enhancing grant relevancy and effectiveness by 30% using AI and LLM-powered solutions.</p>
-                </li>
+                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gray-700 relative overflow-hidden">
+                        <img src="assets/dpi-project.jpg" alt="DPI Project" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-4">Discovery Partner Institute (DPI)</h3>
+                        <p class="text-gray-300 mb-6">Developed tools for project and grant tracking, enhancing grant relevancy and effectiveness by 30% using AI and LLM-powered solutions.</p>
+                        <a href="https://github.com/panshul24/Discovery-Partner-Institute-DPI-" 
+                           class="inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
 
-                <li class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold text-white mb-2">Energy Production Trends Analysis</h3>
-                    <a href="https://github.com/panshul24/Energy-Production-Trends-Analysis" 
-                       class="inline-block text-blue-400 hover:text-blue-300 mb-2 underline"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        View on GitHub →
-                    </a>
-                    <p class="text-gray-300">Analyzed energy production data to identify trends and patterns, providing insights into renewable energy sources and their impact on the market.</p>
-                </li>
-            </ul>
+                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gray-700 relative overflow-hidden">
+                        <img src="assets/energy-analysis.jpg" alt="Energy Analysis" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-4">Energy Production Trends Analysis</h3>
+                        <p class="text-gray-300 mb-6">Analyzed energy production data to identify trends and patterns, providing insights into renewable energy sources and their impact on the market.</p>
+                        <a href="https://github.com/panshul24/Energy-Production-Trends-Analysis" 
+                           class="inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     
