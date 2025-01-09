@@ -14,7 +14,9 @@
     <div id="particles" class="fixed top-0 left-0 w-full h-full -z-10"></div>
     <header class="fixed top-0 left-0 w-full bg-gray-800 text-white shadow-md z-50">
         <div class="container mx-auto flex justify-between items-center p-6">
-            <h1 class="text-3xl font-bold">Panshul Saraswat</h1>
+            <h1 class="text-3xl font-bold">
+                <a href="#home" class="hover:text-blue-500 transition-colors duration-300">Panshul Saraswat</a>
+            </h1>
             <nav>
                 <ul class="flex space-x-6">
                     <li><a href="#home" class="hover:text-blue-500">Home</a></li>
@@ -23,7 +25,7 @@
                     <li><a href="#skills" class="hover:text-blue-500">Expertise & Skills</a></li>
                     <li><a href="#experience" class="hover:text-blue-500">Experience</a></li>
                     <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
-                    <li><a href="#leadership" class="hover:text-blue-500">Leadership</a></li>
+                    <li><a href="#leadership" class="hover:text-blue-500">Leadership & Publications</a></li>
                     <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
                 </ul>
             </nav>
@@ -31,6 +33,7 @@
     </header>
     
     <div class="section" id="home">
+        <div class="home-background"></div>
         <div id="particles-home" class="fixed top-0 left-0 w-full h-full -z-10"></div>
         <div class="container mx-auto py-20 flex flex-col items-center justify-center min-h-screen">
             <h1 class="text-6xl font-bold mb-8 text-white flex items-center gap-4">
@@ -65,10 +68,18 @@
             </div>
             
             <h2 class="text-4xl font-semibold mb-3 text-center">About Me</h2>
-            <div class="text-lg leading-relaxed max-w-2xl mx-auto text-left space-y-4">
-                <p>An analytical and detail-oriented professional with a Master's in Business Analytics from the University of Illinois Urbana-Champaign. Skilled in data analysis, extraction, model development, and crafting impactful visualizations. Adept at bridging the gap between technical and non-technical teams by effectively communicating insights to drive business growth.</p>
+            <div class="text-base leading-relaxed max-w-4xl mx-auto text-left space-y-3">
+                <p class="font-semibold text-white">
+                    Hi, I am Panshul Saraswat. I am a data-driven professional with a Master's in Business Analytics from the University of Illinois Urbana-Champaign. With expertise in data analysis, extraction, and model development, I am passionate about crafting impactful visualizations and transforming raw data into actionable insights that drive business growth.
+                </p>
                 
-                <p>Proficient in project management, technical troubleshooting, and deriving actionable insights from complex datasets. Passionate about continuous learning and implementing innovative solutions to optimize data-driven processes. Enjoys FPS gaming and travel for fun and adventure.</p>
+                <p class="font-semibold text-white">
+                    I thrive at bridging the gap between technical and non-technical audiences, ensuring data-driven decisions are accessible and impactful. Skilled in project management and technical troubleshooting, I enjoy optimizing processes with innovative solutions and continuously learning to stay ahead in the rapidly evolving world of analytics.
+                </p>
+
+                <p class="text-gray-400">
+                    Beyond work, you'll often find me exploring my passions for FPS gaming, traveling to new destinations, and seeking fun and adventure in every corner of life. For me, growth stems not only from professional challenges but also from the diverse experiences that life has to offer.
+                </p>
             </div>
         </div>
     </div>
@@ -290,6 +301,15 @@
                                 <p class="text-gray-300 text-sm leading-relaxed mt-2">
                                     Designed and deployed a comprehensive data extraction and summarization system using Azure Chat OpenAI, advanced NLP models, and PDF extraction, enhancing data retrieval accuracy by 40% and halving processing time.
                                 </p>
+                                <p class="text-gray-300 text-sm leading-relaxed mt-4">
+                                    Our work was recognized and featured in an article by the Gies College of Business. 
+                                    <a href="https://giesbusiness.illinois.edu/news/2024/08/26/gies-msba-students-create-innovative-ai-tool-to-streamline-industry-academia-collaboration" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer" 
+                                       class="text-blue-400 hover:text-blue-300 underline">
+                                        Read more about the project here
+                                    </a>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -506,13 +526,37 @@
         <div class="container mx-auto py-20">
             <h2 class="text-4xl font-semibold mb-6">Leadership & Publications</h2>
             <ul class="space-y-4">
-                <li>
+                <li class="leadership-item p-4 rounded-lg">
+                    <strong>Featured Project: AI Tool for Streamlining Industry-Academia Collaboration</strong><br>
+                    As part of the Gies MSBA program, I led the development of an innovative AI-powered tool designed to streamline collaboration between industry and academia. This project involved leveraging advanced AI models, including natural language processing and vector storage technologies, to enhance efficiency in project and grant management.<br><br>
+                    Our work was recognized and featured in an article by the Gies College of Business. 
+                    <a href="https://giesbusiness.illinois.edu/news/2024/08/26/gies-msba-students-create-innovative-ai-tool-to-streamline-industry-academia-collaboration" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="text-blue-400 hover:text-blue-300 underline">
+                        Read more about the project here
+                    </a>
+                </li>
+                <li class="leadership-item p-4 rounded-lg">
                     <strong>Gies College of Business - MSBA Student Leadership Council</strong><br>
                     Acted as a liaison for over 100 students, resolving conflicts and creating a support system that provided academic resources to enhance student success.
                 </li>
-                <li>
-                    <strong>Design and Implementation of Approximate Divider For Error-Resilient Image Processing Applications</strong><br>
-                    Presented a research paper at the IEEE-sponsored conference on the design and implementation of an approximate divider for error-resilient image processing applications, utilizing Cadence Virtuoso, MODELSIM, and MATLAB for VLSI circuit design.
+                <li class="leadership-item p-4 rounded-lg">
+                    <strong>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10157050" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="text-inherit hover:text-blue-300">
+                            Design and Implementation of Approximate Divider For Error-Resilient Image Processing Applications
+                        </a>
+                    </strong><br>
+                    Presented a research paper at the IEEE-sponsored conference on the design and implementation of an approximate divider for error-resilient image processing applications, utilizing Cadence Virtuoso, MODELSIM, and MATLAB for VLSI circuit design.<br><br>
+                    <a href="https://ieeexplore.ieee.org/abstract/document/10157050" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="text-blue-400 hover:text-blue-300 underline">
+                        Click here to read the full paper
+                    </a>
                 </li>
             </ul>
         </div>

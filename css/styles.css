@@ -611,3 +611,58 @@ body.is-scrolling * {
     margin-top: 2rem;
 }
 
+/* Leadership section hover effects */
+.leadership-item {
+    background-color: rgba(31, 41, 55, 0.2);
+    transform: translateX(0);
+    transition: all 0.3s ease;
+}
+
+.leadership-item:hover {
+    background-color: rgba(31, 41, 55, 0.5);
+    transform: translateX(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.leadership-item strong {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.leadership-item:hover strong {
+    color: #60A5FA;
+}
+
+/* Home section background */
+.section#home {
+    position: relative;
+}
+
+.section#home::before {
+    display: none;
+}
+
+/* Home section background */
+.home-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../assets/backdrop.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.08;
+    z-index: -2;
+}
+
+/* Ensure home section has proper positioning */
+.section#home {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
