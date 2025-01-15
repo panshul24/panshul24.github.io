@@ -8,7 +8,7 @@ body {
 
 /* Section styles */
 .section {
-    min-height: 100vh;
+    min-height: auto;
     padding: 20px 0;
     display: flex;
     align-items: flex-start;
@@ -127,11 +127,8 @@ header {
 /* Special styling for experience and projects sections */
 #experience .container,
 #projects .container {
-    max-height: calc(100vh - 120px); /* Account for header and some padding */
-    overflow-y: auto;
+    max-width: 1200px;
     padding: 2rem;
-    scrollbar-width: thin;
-    scrollbar-color: #4a5568 transparent;
     margin-top: 20px;
 }
 
@@ -637,30 +634,6 @@ body.is-scrolling * {
 /* Home section background */
 .section#home {
     position: relative;
-}
-
-.section#home::before {
-    display: none;
-}
-
-/* Home section background */
-.home-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url('../assets/backdrop.webp');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.08;
-    z-index: -2;
-}
-
-/* Ensure home section has proper positioning */
-.section#home {
-    position: relative;
     height: 100vh;
     width: 100vw;
     overflow: hidden;
@@ -669,12 +642,8 @@ body.is-scrolling * {
 /* Projects section styles */
 #projects .container {
     max-width: 1280px;
-    height: calc(100vh - 80px);
-    overflow-y: auto;
     padding-right: 1rem;
     padding-left: 1rem;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(59, 130, 246, 0.5) rgba(17, 24, 39, 0.1);
 }
 
 #projects .container::-webkit-scrollbar {
