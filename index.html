@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/cool.png">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -13,7 +14,7 @@
 <body class="bg-white">
     <div id="particles" class="fixed top-0 left-0 w-full h-full -z-10"></div>
     <header class="fixed top-0 left-0 w-full bg-gray-100 text-gray-800 z-50">
-        <div class="container flex justify-between items-center px-4">
+        <div class="container flex justify-between items-center px-4 relative">
             <h1>
                 <a href="#home">Panshul Saraswat</a>
             </h1>
@@ -26,15 +27,15 @@
                 </button>
             </div>
             <!-- Mobile menu -->
-            <div id="mobile-menu" class="hidden absolute top-[60px] left-0 w-full bg-white shadow-lg z-50 md:hidden">
-                <nav class="flex flex-col py-2">
-                    <a href="#summary" class="px-4 py-2 hover:bg-gray-100">About Me</a>
-                    <a href="#education" class="px-4 py-2 hover:bg-gray-100">Education</a>
-                    <a href="#skills" class="px-4 py-2 hover:bg-gray-100">Expertise & Skills</a>
-                    <a href="#experience" class="px-4 py-2 hover:bg-gray-100">Experience</a>
-                    <a href="#projects" class="px-4 py-2 hover:bg-gray-100">Projects</a>
-                    <a href="#leadership" class="px-4 py-2 hover:bg-gray-100">Leadership & Publications</a>
-                    <a href="#contact" class="px-4 py-2 hover:bg-gray-100">Contact</a>
+            <div id="mobile-menu" class="hidden absolute right-0 top-full mt-2 w-48 bg-white rounded-lg shadow-lg overflow-hidden z-50 md:hidden">
+                <nav class="flex flex-col">
+                    <a href="#summary" class="px-4 py-2 text-gray-800 hover:bg-gray-100 border-b border-gray-100">About Me</a>
+                    <a href="#education" class="px-4 py-2 text-gray-800 hover:bg-gray-100 border-b border-gray-100">Education</a>
+                    <a href="#skills" class="px-4 py-2 text-gray-800 hover:bg-gray-100 border-b border-gray-100">Expertise & Skills</a>
+                    <a href="#experience" class="px-4 py-2 text-gray-800 hover:bg-gray-100 border-b border-gray-100">Experience</a>
+                    <a href="#projects" class="px-4 py-2 text-gray-800 hover:bg-gray-100 border-b border-gray-100">Projects</a>
+                    <a href="#leadership" class="px-4 py-2 text-gray-800 hover:bg-gray-100 border-b border-gray-100">Leadership & Publications</a>
+                    <a href="#contact" class="px-4 py-2 text-gray-800 hover:bg-gray-100">Contact</a>
                 </nav>
             </div>
             <!-- Desktop menu -->

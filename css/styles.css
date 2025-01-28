@@ -1032,32 +1032,49 @@ body.is-scrolling * {
 
 /* Mobile menu styles */
 #mobile-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: white;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    z-index: 50;
+    transition: opacity 0.2s ease-in-out;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-#mobile-menu nav {
-    border-top: 1px solid rgba(229, 231, 235, 0.3);
+#mobile-menu.hidden {
+    display: none;
+    opacity: 0;
 }
 
 #mobile-menu nav a {
-    display: block;
-    padding: 0.75rem 1.5rem;
-    color: #1f2937;
-    font-weight: 500;
-    border-bottom: 1px solid rgba(229, 231, 235, 0.3);
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 
 #mobile-menu nav a:hover {
-    background-color: rgba(59, 130, 246, 0.1);
-    padding-left: 2rem;
-    color: #2563eb;
+    background-color: #f3f4f6;
+}
+
+/* Header container */
+header .container {
+    position: relative;
+}
+
+/* Hamburger button */
+#hamburger-menu {
+    padding: 0.5rem;
+    margin: -0.5rem;
+    cursor: pointer;
+}
+
+#hamburger-menu:hover {
+    opacity: 0.75;
+}
+
+/* Ensure mobile menu is above other content */
+@media (max-width: 768px) {
+    header {
+        position: relative;
+        z-index: 1000;
+    }
+    
+    #mobile-menu {
+        z-index: 1001;
+    }
 }
 
 /* Preserve desktop styles */

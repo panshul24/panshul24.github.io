@@ -4,15 +4,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenu = document.getElementById('mobile-menu');
     
     if (hamburgerButton && mobileMenu) {
-        // Toggle menu on hamburger click
         hamburgerButton.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
-            if (mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.remove('hidden');
-            } else {
-                mobileMenu.classList.add('hidden');
-            }
+            mobileMenu.classList.toggle('hidden');
         });
 
         // Close mobile menu when clicking a link
