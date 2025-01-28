@@ -3,26 +3,32 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburgerButton = document.getElementById('hamburger-menu');
     const mobileMenu = document.getElementById('mobile-menu');
     
-    hamburgerButton.addEventListener('click', function() {
-        this.classList.toggle('hamburger-active');
-        mobileMenu.classList.toggle('active');
-    });
-
-    // Close mobile menu when clicking a link
-    document.querySelectorAll('#mobile-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            hamburgerButton.classList.remove('hamburger-active');
-            mobileMenu.classList.remove('active');
+    if (hamburgerButton && mobileMenu) {
+        // Toggle menu on hamburger click
+        hamburgerButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+            }
         });
-    });
 
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
-        if (!hamburgerButton.contains(event.target) && !mobileMenu.contains(event.target)) {
-            hamburgerButton.classList.remove('hamburger-active');
-            mobileMenu.classList.remove('active');
-        }
-    });
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!hamburgerButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    }
 
     // Particle configuration
     const particleConfig = {

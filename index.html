@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>Panshul Saraswat - Portfolio</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -12,30 +13,32 @@
 <body class="bg-white">
     <div id="particles" class="fixed top-0 left-0 w-full h-full -z-10"></div>
     <header class="fixed top-0 left-0 w-full bg-gray-100 text-gray-800 z-50">
-        <div class="container">
+        <div class="container flex justify-between items-center px-4">
             <h1>
                 <a href="#home">Panshul Saraswat</a>
             </h1>
             <!-- Add hamburger menu button -->
-            <button id="hamburger-menu" class="md:hidden flex flex-col justify-center items-center w-8 h-8">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
+            <div class="md:hidden">
+                <button id="hamburger-menu" class="text-gray-800 hover:text-gray-600 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
             <!-- Mobile menu -->
-            <div id="mobile-menu" class="hidden md:hidden fixed top-[60px] left-0 w-full bg-gray-100 shadow-lg">
-                <nav class="flex flex-col p-4">
-                    <a href="#summary" class="py-2">About Me</a>
-                    <a href="#education" class="py-2">Education</a>
-                    <a href="#skills" class="py-2">Expertise & Skills</a>
-                    <a href="#experience" class="py-2">Experience</a>
-                    <a href="#projects" class="py-2">Projects</a>
-                    <a href="#leadership" class="py-2">Leadership & Publications</a>
-                    <a href="#contact" class="py-2">Contact</a>
+            <div id="mobile-menu" class="hidden absolute top-[60px] left-0 w-full bg-white shadow-lg z-50 md:hidden">
+                <nav class="flex flex-col py-2">
+                    <a href="#summary" class="px-4 py-2 hover:bg-gray-100">About Me</a>
+                    <a href="#education" class="px-4 py-2 hover:bg-gray-100">Education</a>
+                    <a href="#skills" class="px-4 py-2 hover:bg-gray-100">Expertise & Skills</a>
+                    <a href="#experience" class="px-4 py-2 hover:bg-gray-100">Experience</a>
+                    <a href="#projects" class="px-4 py-2 hover:bg-gray-100">Projects</a>
+                    <a href="#leadership" class="px-4 py-2 hover:bg-gray-100">Leadership & Publications</a>
+                    <a href="#contact" class="px-4 py-2 hover:bg-gray-100">Contact</a>
                 </nav>
             </div>
             <!-- Desktop menu -->
-            <nav class="hidden md:flex">
+            <nav class="hidden md:flex gap-6">
                 <a href="#summary">About Me</a>
                 <a href="#education">Education</a>
                 <a href="#skills">Expertise & Skills</a>
@@ -56,7 +59,7 @@
             </h1>
             <h2 class="text-6xl font-bold mb-8 text-gray-800">Panshul Saraswat</h2>
             <p class="text-2xl text-gray-600 mb-12">Empowering decisions through data-driven analysis</p>
-            <a href="assets/Resume__Panshul_.pdf" 
+            <a href="assets/Resume_Panshul_m.pdf" 
                target="_blank"
                rel="noopener noreferrer"
                class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center space-x-2">
@@ -796,3 +799,5 @@
 </body>
 </html>
 
+
+ritten_file>
