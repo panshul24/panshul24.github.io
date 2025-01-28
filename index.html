@@ -5,49 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="assets/cool.png">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>Panshul Saraswat - Portfolio</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="js/scripts.js"></script>
 </head>
 <body class="bg-white">
     <div id="particles" class="fixed top-0 left-0 w-full h-full -z-10"></div>
-    <header class="fixed top-0 left-0 w-full bg-gray-100 text-gray-800 z-50">
-        <div class="container flex justify-between items-center px-4 relative">
-            <h1>
-                <a href="#home">Panshul Saraswat</a>
-            </h1>
-            <!-- Add hamburger menu button -->
-            <div class="md:hidden">
-                <button id="hamburger-menu" class="text-gray-800 hover:text-gray-600 focus:outline-none">
-                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <header class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-4 py-4">
+            <!-- Top Navigation -->
+            <div class="flex justify-between items-center">
+                <h1 class="text-xl font-bold">
+                    <a href="#home" class="text-gray-800">Panshul Saraswat</a>
+                </h1>
+                
+                <!-- Hamburger Menu Button -->
+                <button id="hamburger-menu" class="md:hidden p-2 rounded-lg hover:bg-gray-100 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
                 </button>
-            </div>
-            <!-- Mobile menu -->
-            <div id="mobile-menu" class="hidden absolute right-0 top-full mt-2 w-48 bg-white rounded-lg shadow-lg overflow-hidden z-50 md:hidden">
-                <nav class="flex flex-col">
-                    <a href="#summary" class="px-4 py-2 text-gray-800 hover:bg-gray-100 border-b border-gray-100">About Me</a>
-                    <a href="#education" class="px-4 py-2 text-gray-800 hover:bg-gray-100 border-b border-gray-100">Education</a>
-                    <a href="#skills" class="px-4 py-2 text-gray-800 hover:bg-gray-100 border-b border-gray-100">Expertise & Skills</a>
-                    <a href="#experience" class="px-4 py-2 text-gray-800 hover:bg-gray-100 border-b border-gray-100">Experience</a>
-                    <a href="#projects" class="px-4 py-2 text-gray-800 hover:bg-gray-100 border-b border-gray-100">Projects</a>
-                    <a href="#leadership" class="px-4 py-2 text-gray-800 hover:bg-gray-100 border-b border-gray-100">Leadership & Publications</a>
-                    <a href="#contact" class="px-4 py-2 text-gray-800 hover:bg-gray-100">Contact</a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex gap-6">
+                    <a href="#summary" class="text-gray-800 hover:text-blue-600">About Me</a>
+                    <a href="#education" class="text-gray-800 hover:text-blue-600">Education</a>
+                    <a href="#skills" class="text-gray-800 hover:text-blue-600">Expertise & Skills</a>
+                    <a href="#experience" class="text-gray-800 hover:text-blue-600">Experience</a>
+                    <a href="#projects" class="text-gray-800 hover:text-blue-600">Projects</a>
+                    <a href="#leadership" class="text-gray-800 hover:text-blue-600">Leadership & Publications</a>
+                    <a href="#contact" class="text-gray-800 hover:text-blue-600">Contact</a>
                 </nav>
             </div>
-            <!-- Desktop menu -->
-            <nav class="hidden md:flex gap-6">
-                <a href="#summary">About Me</a>
-                <a href="#education">Education</a>
-                <a href="#skills">Expertise & Skills</a>
-                <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
-                <a href="#leadership">Leadership & Publications</a>
-                <a href="#contact">Contact</a>
-            </nav>
+
+            <!-- Mobile Menu (Hidden by default) -->
+            <div id="mobile-menu" class="hidden md:hidden w-full">
+                <nav class="flex flex-col mt-4">
+                    <a href="#summary" class="block py-2 px-4 text-gray-800 hover:bg-gray-100 border-b border-gray-100">About Me</a>
+                    <a href="#education" class="block py-2 px-4 text-gray-800 hover:bg-gray-100 border-b border-gray-100">Education</a>
+                    <a href="#skills" class="block py-2 px-4 text-gray-800 hover:bg-gray-100 border-b border-gray-100">Expertise & Skills</a>
+                    <a href="#experience" class="block py-2 px-4 text-gray-800 hover:bg-gray-100 border-b border-gray-100">Experience</a>
+                    <a href="#projects" class="block py-2 px-4 text-gray-800 hover:bg-gray-100 border-b border-gray-100">Projects</a>
+                    <a href="#leadership" class="block py-2 px-4 text-gray-800 hover:bg-gray-100 border-b border-gray-100">Leadership & Publications</a>
+                    <a href="#contact" class="block py-2 px-4 text-gray-800 hover:bg-gray-100">Contact</a>
+                </nav>
+            </div>
         </div>
     </header>
     

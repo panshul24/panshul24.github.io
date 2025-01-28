@@ -1,26 +1,32 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Hamburger menu functionality
+    // Mobile Menu Toggle
     const hamburgerButton = document.getElementById('hamburger-menu');
     const mobileMenu = document.getElementById('mobile-menu');
     
     if (hamburgerButton && mobileMenu) {
-        hamburgerButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            mobileMenu.classList.toggle('hidden');
+        hamburgerButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('show');
         });
 
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
+        // Close menu when clicking a link
+        const mobileLinks = mobileMenu.getElementsByTagName('a');
+        for (let i = 0; i < mobileLinks.length; i++) {
+            mobileLinks[i].addEventListener('click', function() {
+                mobileMenu.classList.remove('show');
             });
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!mobileMenu.contains(e.target) && !hamburgerButton.contains(e.target)) {
+                mobileMenu.classList.remove('show');
+            }
         });
 
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            if (!hamburgerButton.contains(event.target) && !mobileMenu.contains(event.target)) {
-                mobileMenu.classList.add('hidden');
+        // Close menu when scrolling
+        window.addEventListener('scroll', function() {
+            if (mobileMenu.classList.contains('show')) {
+                mobileMenu.classList.remove('show');
             }
         });
     }
