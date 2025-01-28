@@ -9,24 +9,40 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
 </head>
-<body>
+<body class="bg-white">
     <div id="particles" class="fixed top-0 left-0 w-full h-full -z-10"></div>
-    <header class="fixed top-0 left-0 w-full bg-gray-800 text-white shadow-md z-50">
-        <div class="container mx-auto flex justify-between items-center p-6">
-            <h1 class="text-3xl font-bold">
-                <a href="#home" class="hover:text-blue-500 transition-colors duration-300">Panshul Saraswat</a>
+    <header class="fixed top-0 left-0 w-full bg-gray-100 text-gray-800 z-50">
+        <div class="container">
+            <h1>
+                <a href="#home">Panshul Saraswat</a>
             </h1>
-            <nav>
-                <ul class="flex space-x-6">
-                    <li><a href="#home" class="hover:text-blue-500">Home</a></li>
-                    <li><a href="#summary" class="hover:text-blue-500">About Me</a></li>
-                    <li><a href="#education" class="hover:text-blue-500">Education</a></li>
-                    <li><a href="#skills" class="hover:text-blue-500">Expertise & Skills</a></li>
-                    <li><a href="#experience" class="hover:text-blue-500">Experience</a></li>
-                    <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
-                    <li><a href="#leadership" class="hover:text-blue-500">Leadership & Publications</a></li>
-                    <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
-                </ul>
+            <!-- Add hamburger menu button -->
+            <button id="hamburger-menu" class="md:hidden flex flex-col justify-center items-center w-8 h-8">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden fixed top-[60px] left-0 w-full bg-gray-100 shadow-lg">
+                <nav class="flex flex-col p-4">
+                    <a href="#summary" class="py-2">About Me</a>
+                    <a href="#education" class="py-2">Education</a>
+                    <a href="#skills" class="py-2">Expertise & Skills</a>
+                    <a href="#experience" class="py-2">Experience</a>
+                    <a href="#projects" class="py-2">Projects</a>
+                    <a href="#leadership" class="py-2">Leadership & Publications</a>
+                    <a href="#contact" class="py-2">Contact</a>
+                </nav>
+            </div>
+            <!-- Desktop menu -->
+            <nav class="hidden md:flex">
+                <a href="#summary">About Me</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Expertise & Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#leadership">Leadership & Publications</a>
+                <a href="#contact">Contact</a>
             </nav>
         </div>
     </header>
@@ -34,12 +50,12 @@
     <div class="section" id="home">
         <div id="particles-home" class="fixed top-0 left-0 w-full h-full -z-10"></div>
         <div class="container mx-auto py-20 flex flex-col items-center justify-center min-h-screen">
-            <h1 class="text-6xl font-bold mb-8 text-white flex items-center gap-4">
+            <h1 class="text-6xl font-bold mb-8 text-gray-800 flex items-center gap-4">
                 <span>Hi! I am</span>
                 <span class="wave">👋</span>
             </h1>
-            <h2 class="text-6xl font-bold mb-8 text-white">Panshul Saraswat</h2>
-            <p class="text-2xl text-gray-300 mb-12">Empowering decisions through data-driven analysis</p>
+            <h2 class="text-6xl font-bold mb-8 text-gray-800">Panshul Saraswat</h2>
+            <p class="text-2xl text-gray-600 mb-12">Empowering decisions through data-driven analysis</p>
             <a href="assets/Resume__Panshul_.pdf" 
                target="_blank"
                rel="noopener noreferrer"
@@ -54,30 +70,35 @@
     
     <div class="section" id="summary">
         <div id="particles-summary" class="fixed top-0 left-0 w-full h-full -z-10"></div>
-        <div class="container mx-auto py-4">
-            <!-- Profile Image -->
-            <div class="flex flex-col items-center mb-4">
-                <div class="w-72 h-72 mb-3">
-                    <img src="assets/IMG_2730.jpg" 
-                         alt="Panshul Saraswat" 
-                         class="w-full h-full object-cover rounded-lg shadow-xl">
+        <div class="container">
+            <div class="flex flex-col md:flex-row items-start gap-8 min-h-screen py-20">
+                <!-- Profile Image -->
+                <div class="w-full md:w-1/3 flex flex-col items-center sticky top-24">
+                    <div class="w-96 h-96 rounded-lg overflow-hidden">
+                        <img src="assets/IMG_2730.jpg" 
+                             alt="Panshul Saraswat" 
+                             class="w-full h-full object-cover">
+                    </div>
                 </div>
-                <div class="w-16 h-0.5 bg-blue-500 mb-3"></div>
-            </div>
-            
-            <h2 class="text-4xl font-semibold mb-3 text-center">About Me</h2>
-            <div class="text-base leading-relaxed max-w-4xl mx-auto text-left space-y-3">
-                <p class="font-semibold text-white">
-                    Hi, I am Panshul Saraswat. I am a data-driven professional with a Master's in Business Analytics from the University of Illinois Urbana-Champaign. With expertise in data analysis, extraction, and model development, I am passionate about crafting impactful visualizations and transforming raw data into actionable insights that drive business growth.
-                </p>
-                
-                <p class="font-semibold text-white">
-                    I thrive at bridging the gap between technical and non-technical audiences, ensuring data-driven decisions are accessible and impactful. Skilled in project management and technical troubleshooting, I enjoy optimizing processes with innovative solutions and continuously learning to stay ahead in the rapidly evolving world of analytics.
-                </p>
 
-                <p class="text-gray-400">
-                    Beyond work, you'll often find me exploring my passions for FPS gaming, traveling to new destinations, and seeking fun and adventure in every corner of life. For me, growth stems not only from professional challenges but also from the diverse experiences that life has to offer.
-                </p>
+                <!-- Vertical Divider -->
+                <div class="hidden md:block w-[1px] bg-blue-400 self-stretch mx-8" style="min-height: 400px;"></div>
+                
+                <!-- About Me Text -->
+                <div class="w-full md:w-2/3">
+                    <h2 class="text-4xl font-bold mb-8 text-gray-900">About Me</h2>
+                    <div class="space-y-6">
+                        <p style="color: #1a202c; font-weight: 500;">
+                            Hi, I'm Panshul Saraswat, a data-driven professional with a Master's in Business Analytics from the University of Illinois Urbana-Champaign. With expertise in data analysis, machine learning, and AI-powered solutions, I am passionate about transforming raw data into actionable insights that drive measurable business growth. My achievements include a 40% improvement in analysis accuracy, a 50% reduction in processing time, and a 30% boost in grant relevancy—showcasing my ability to optimize processes and deliver impactful results.
+                        </p>
+                        <p style="color: #1a202c; font-weight: 500;">
+                            I thrive on bridging the gap between technical and non-technical audiences, ensuring data-driven decisions are accessible, actionable, and strategically aligned. From building robust data pipelines to deploying interactive dashboards, I enjoy creating innovative solutions that enhance decision-making and streamline workflows.
+                        </p>
+                        <p style="color: #6b7280;">
+                            Beyond work, I'm an avid FPS gamer and an enthusiastic traveler, always seeking fun, adventure, and new experiences. I believe growth stems not only from professional challenges but also from exploring diverse perspectives and opportunities life has to offer.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -85,42 +106,44 @@
     <div class="section" id="education">
         <div id="particles-education" class="fixed top-0 left-0 w-full h-full -z-10"></div>
         <div class="container mx-auto py-20">
-            <h2 class="text-4xl font-semibold mb-12 text-center">EDUCATION</h2>
-            
+            <!-- Section Title -->
+            <h2 class="text-4xl font-semibold mb-12 text-gray-800 text-center">EDUCATION</h2>
+
+            <!-- Education Cards -->
             <div class="flex flex-col md:flex-row items-start gap-12 justify-center">
                 <!-- UIUC Education -->
-                <div class="w-full md:w-[400px] bg-gray-800/50 rounded-lg overflow-hidden backdrop-blur-sm">
+                <div class="w-full md:w-[400px] bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
                     <div class="h-48 overflow-hidden flex items-center justify-center bg-white">
                         <img src="assets/University_of_Illinois_at_Urbana-Champaign_Wordmark.svg.png" 
                              alt="UIUC Logo" 
                              class="w-full h-full object-contain p-4">
                     </div>
                     <div class="p-6">
-                        <h4 class="text-xl font-semibold text-white">Master of Science in Business Analytics</h4>
-                        <p class="text-gray-400">2023-2024</p>
-                        <p class="text-blue-400 mt-2">GPA: 3.85/4.0</p>
+                        <h4 class="text-xl font-semibold text-gray-800">Master of Science in Business Analytics</h4>
+                        <p class="text-gray-600">2023-2024</p>
+                        <p class="text-blue-600 mt-2">GPA: 3.85/4.0</p>
                     </div>
                 </div>
 
                 <!-- SRM Education -->
-                <div class="w-full md:w-[400px] bg-gray-800/50 rounded-lg overflow-hidden backdrop-blur-sm">
+                <div class="w-full md:w-[400px] bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
                     <div class="h-48 overflow-hidden flex items-center justify-center bg-white">
                         <img src="assets/srm-institute-of-science-and-technology-vector-logo.png" 
                              alt="SRM Logo" 
                              class="w-full h-full object-contain p-4">
                     </div>
                     <div class="p-6">
-                        <h4 class="text-xl font-semibold text-white">Bachelor of Technology in Electronics and Communication Engineering</h4>
-                        <p class="text-gray-400">2017-2021</p>
-                        <p class="text-blue-400 mt-2">GPA: 7.61/10.0</p>
+                        <h4 class="text-xl font-semibold text-gray-800">Bachelor of Technology in Electronics and Communication Engineering</h4>
+                        <p class="text-gray-600">2017-2021</p>
+                        <p class="text-blue-600 mt-2">GPA: 7.61/10.0</p>
                     </div>
                 </div>
             </div>
 
             <!-- Coursework Section -->
-            <div class="mt-12 p-6 bg-gray-800/50 rounded-lg backdrop-blur-sm">
-                <h5 class="text-lg font-semibold text-white mb-4">Relevant Coursework:</h5>
-                <div class="text-gray-300 text-base">
+            <div class="mt-12 p-6 bg-white rounded-lg shadow-lg">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">Relevant Coursework:</h3>
+                <div class="text-gray-700">
                     Database Management, Predictive & Statistical Analysis, Business Intelligence, Decision Modeling, Data Mining, Data Storytelling, Data Visualization, Machine Learning, Supply Chain Management, Big Data Finance, Financial Data Management Analysis
                 </div>
             </div>
@@ -130,80 +153,72 @@
     <div class="section" id="skills">
         <div id="particles-skills" class="fixed top-0 left-0 w-full h-full -z-10"></div>
         <div class="container mx-auto px-4 py-10">
-            <h2 class="text-4xl font-semibold mb-8 text-center">Expertise & Skills</h2>
+            <h2 class="text-4xl font-semibold mb-8 text-gray-800 text-center">Expertise & Skills</h2>
             
             <!-- Areas of Expertise -->
-            <div class="bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm mb-8">
-                <h3 class="text-2xl font-semibold mb-4 text-blue-400">Areas of Expertise</h3>
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold mb-6 text-gray-800">Areas of Expertise</h3>
                 <div class="flex flex-wrap justify-center gap-4">
-                    <div class="bg-blue-500/20 rounded-lg p-3 text-center w-[180px]">
-                        <p class="text-white">Python Programming</p>
+                    <div class="bg-white rounded-lg p-3 text-center w-[180px] border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-lg hover:scale-105 hover:bg-gray-50">
+                        <p class="text-gray-800">Python Programming</p>
                     </div>
-                    <div class="bg-blue-500/20 rounded-lg p-3 text-center w-[180px]">
-                        <p class="text-white">SQL</p>
+                    <div class="bg-white rounded-lg p-3 text-center w-[180px] border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-lg hover:scale-105 hover:bg-gray-50">
+                        <p class="text-gray-800">SQL</p>
                     </div>
-                    <div class="bg-blue-500/20 rounded-lg p-3 text-center w-[180px]">
-                        <p class="text-white">Data Science</p>
+                    <div class="bg-white rounded-lg p-3 text-center w-[180px] border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-lg hover:scale-105 hover:bg-gray-50">
+                        <p class="text-gray-800">Data Science</p>
                     </div>
-                    <div class="bg-blue-500/20 rounded-lg p-3 text-center w-[180px]">
-                        <p class="text-white">Data Analysis</p>
+                    <div class="bg-white rounded-lg p-3 text-center w-[180px] border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-lg hover:scale-105 hover:bg-gray-50">
+                        <p class="text-gray-800">Data Analysis</p>
                     </div>
-                    <div class="bg-blue-500/20 rounded-lg p-3 text-center w-[180px]">
-                        <p class="text-white">Machine Learning</p>
+                    <div class="bg-white rounded-lg p-3 text-center w-[180px] border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-lg hover:scale-105 hover:bg-gray-50">
+                        <p class="text-gray-800">Machine Learning</p>
                     </div>
-                    <div class="bg-blue-500/20 rounded-lg p-3 text-center w-[180px]">
-                        <p class="text-white">Data Visualisation</p>
+                    <div class="bg-white rounded-lg p-3 text-center w-[180px] border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-lg hover:scale-105 hover:bg-gray-50">
+                        <p class="text-gray-800">Data Visualisation</p>
                     </div>
-                    <div class="bg-blue-500/20 rounded-lg p-3 text-center w-[180px]">
-                        <p class="text-white">Data Engineering</p>
+                    <div class="bg-white rounded-lg p-3 text-center w-[180px] border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-lg hover:scale-105 hover:bg-gray-50">
+                        <p class="text-gray-800">Data Engineering</p>
                     </div>
-                    <div class="bg-blue-500/20 rounded-lg p-3 text-center w-[180px]">
-                        <p class="text-white">NLP</p>
+                    <div class="bg-white rounded-lg p-3 text-center w-[180px] border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-lg hover:scale-105 hover:bg-gray-50">
+                        <p class="text-gray-800">NLP</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Tech Stack -->
-            <div class="bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm">
-                <h3 class="text-2xl font-semibold mb-6 text-blue-400">Tech Stack</h3>
+            <!-- Tech Stack Section -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-6 text-gray-800">Tech Stack</h3>
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- Data Science and ML -->
                     <div>
-                        <h4 class="text-lg font-medium text-white mb-3">Data Science and ML</h4>
-                        <div class="bg-white rounded-lg w-[320px] h-[220px] flex items-center justify-center p-4">
-                            <img src="assets/ML.webp" 
-                                 alt="Data Science and ML Stack" 
-                                 class="w-full h-full object-contain transform transition-all duration-300 hover:scale-110">
+                        <h4 class="text-lg font-medium text-gray-800 mb-3">Data Science and ML</h4>
+                        <div class="bg-white rounded-lg w-[320px] h-[220px] flex items-center justify-center p-4 border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-lg hover:scale-105 hover:bg-gray-50">
+                            <img src="assets/ML.webp" alt="Data Science and ML Stack" class="w-full h-full object-contain">
                         </div>
                     </div>
 
                     <!-- Software Development -->
                     <div>
-                        <h4 class="text-lg font-medium text-white mb-3">Software Development</h4>
-                        <div class="bg-white rounded-lg w-[320px] h-[220px] flex items-center justify-center p-4">
-                            <img src="assets/Software devlopment.png" 
-                                 alt="Software Development Stack" 
-                                 class="w-full h-full object-contain transform transition-all duration-300 hover:scale-110">
+                        <h4 class="text-lg font-medium text-gray-800 mb-3">Software Development</h4>
+                        <div class="bg-white rounded-lg w-[320px] h-[220px] flex items-center justify-center p-4 border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-lg hover:scale-105 hover:bg-gray-50">
+                            <img src="assets/Software devlopment.png" alt="Software Development Stack" class="w-full h-full object-contain">
                         </div>
                     </div>
 
                     <!-- Cloud and Databases -->
                     <div>
-                        <h4 class="text-lg font-medium text-white mb-3">Cloud and Databases</h4>
-                        <div class="bg-white rounded-lg w-[320px] h-[220px] flex items-center justify-center p-4">
-                            <img src="assets/Clouddb.png" 
-                                 alt="Cloud and Databases Stack" 
-                                 class="w-full h-full object-contain transform transition-all duration-300 hover:scale-110">
+                        <h4 class="text-lg font-medium text-gray-800 mb-3">Cloud and Databases</h4>
+                        <div class="bg-white rounded-lg w-[320px] h-[220px] flex items-center justify-center p-4 border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-lg hover:scale-105 hover:bg-gray-50">
+                            <img src="assets/Clouddb.png" alt="Cloud and Databases Stack" class="w-full h-full object-contain">
                         </div>
                     </div>
 
                     <!-- Data Visualisation -->
                     <div>
-                        <h4 class="text-lg font-medium text-white mb-3">Data Visualisation</h4>
-                        <div class="bg-white rounded-lg w-[320px] h-[220px] flex items-center justify-center p-4">
-                            <img src="assets/datavizyools.png" 
-                                 alt="Data Visualization Stack" 
-                                 class="w-full h-full object-contain transform transition-all duration-300 hover:scale-110">
+                        <h4 class="text-lg font-medium text-gray-800 mb-3">Data Visualisation</h4>
+                        <div class="bg-white rounded-lg w-[320px] h-[220px] flex items-center justify-center p-4 border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-lg hover:scale-105 hover:bg-gray-50">
+                            <img src="assets/datavizyools.png" alt="Data Visualization Stack" class="w-full h-full object-contain">
                         </div>
                     </div>
                 </div>
@@ -213,26 +228,25 @@
 
     <!-- Certifications Section -->
     <div class="section" id="certifications">
-        <div id="particles-certifications" class="fixed top-0 left-0 w-full h-full -z-10"></div>
         <div class="container mx-auto px-4 py-10">
-            <h2 class="text-4xl font-semibold mb-8 text-center">Certifications</h2>
+            <h2 class="text-4xl font-semibold mb-8 text-gray-800 text-center">Certifications</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="certification-item bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm transform transition-all duration-300 hover:scale-105 hover:bg-gray-700/50">
-                    <h4 class="text-xl font-semibold text-white mb-2">Microsoft Azure Fundamentals</h4>
-                    <p class="text-gray-400">Microsoft</p>
-                    <p class="text-gray-300 mt-4">Cloud computing concepts, core Azure services, security, privacy, compliance, trust, and pricing and support</p>
+                <div class="certification-item bg-white rounded-lg p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.01] hover:bg-gray-50">
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Microsoft Azure Fundamentals</h4>
+                    <p class="text-gray-600">Microsoft</p>
+                    <p class="text-gray-600 mt-4">Cloud computing concepts, core Azure services, security, privacy, compliance, trust, and pricing and support</p>
                 </div>
                 
-                <div class="certification-item bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm transform transition-all duration-300 hover:scale-105 hover:bg-gray-700/50">
-                    <h4 class="text-xl font-semibold text-white mb-2">KNIME Analytics Platform</h4>
-                    <p class="text-gray-400">Basic Proficiency</p>
-                    <p class="text-gray-300 mt-4">Data analytics, machine learning, and data visualization using the KNIME platform</p>
+                <div class="certification-item bg-white rounded-lg p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.01] hover:bg-gray-50">
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">KNIME Analytics Platform</h4>
+                    <p class="text-gray-600">Basic Proficiency</p>
+                    <p class="text-gray-600 mt-4">Data analytics, machine learning, and data visualization using the KNIME platform</p>
                 </div>
                 
-                <div class="certification-item bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm transform transition-all duration-300 hover:scale-105 hover:bg-gray-700/50">
-                    <h4 class="text-xl font-semibold text-white mb-2">Inferential and Predictive Statistics</h4>
-                    <p class="text-gray-400">Business Analytics</p>
-                    <p class="text-gray-300 mt-4">Statistical analysis, hypothesis testing, regression analysis, and predictive modeling for business decisions</p>
+                <div class="certification-item bg-white rounded-lg p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.01] hover:bg-gray-50">
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Inferential and Predictive Statistics</h4>
+                    <p class="text-gray-600">Business Analytics</p>
+                    <p class="text-gray-600 mt-4">Statistical analysis, hypothesis testing, regression analysis, and predictive modeling for business decisions</p>
                 </div>
             </div>
         </div>
@@ -241,7 +255,7 @@
     <div class="section" id="experience">
         <div id="particles-experience" class="fixed top-0 left-0 w-full h-full -z-10"></div>
         <div class="container mx-auto py-20">
-            <h2 class="text-4xl font-semibold mb-12 text-center">Work Experience</h2>
+            <h2 class="text-4xl font-semibold mb-12 text-gray-800 text-center">Work Experience</h2>
             
             <div class="relative">
                 <!-- Timeline line -->
@@ -258,20 +272,17 @@
                                         <img src="assets/santech_solution_inc__logo.jpeg" alt="Santech Solutions" class="w-16 h-16 object-contain">
                                     </div>
                                 </div>
-                                <p class="text-white text-base font-bold mb-4">Santech Solutions</p>
-                                <p class="text-gray-300 text-sm leading-relaxed">
+                                <p class="text-gray-800 text-base font-bold mb-4">Santech Solutions</p>
+                                <p class="text-gray-700 text-sm leading-relaxed">
                                     Contributing to the development of iSmart, an AI-powered healthcare tool at Santech Solutions, which integrates with iNetwork for automated contract analysis, summarization, clause extraction, and new contract generation.
-                                </p>
-                                <p class="text-gray-300 text-sm leading-relaxed mt-2">
-                                    Enhancing contract management in the healthcare sector by implementing machine learning models and vector storage (Milvus, Qdrant), increasing analysis accuracy by 40% and reducing manual processing time by 50%.
                                 </p>
                             </div>
                         </div>
                         <div class="w-[45%]">
                             <div class="max-w-sm ml-[-6rem]">
-                                <h3 class="text-2xl font-bold text-white">Data Analyst</h3>
-                                <p class="text-blue-400">August 2024 - Present</p>
-                                <p class="text-gray-400">Princeton, NJ</p>
+                                <h3 class="text-2xl font-bold text-gray-800">Data Analyst</h3>
+                                <p class="text-blue-600">August 2024 - Present</p>
+                                <p class="text-gray-700">Princeton, NJ</p>
                             </div>
                         </div>
                     </div>
@@ -280,9 +291,9 @@
                     <div class="flex items-start justify-between">
                         <div class="w-[45%] flex flex-col items-end">
                             <div class="max-w-sm text-right mr-[-6rem]">
-                                <h3 class="text-2xl font-bold text-white">Business Analyst</h3>
+                                <h3 class="text-2xl font-bold text-gray-800">Business Analyst</h3>
                                 <p class="text-blue-400">January 2024 - May 2024</p>
-                                <p class="text-gray-400">Champaign, IL</p>
+                                <p class="text-gray-600">Champaign, IL</p>
                             </div>
                         </div>
                         <div class="w-[45%]">
@@ -292,14 +303,14 @@
                                         <img src="assets/website-logo-3.png" alt="DPI" class="w-16 h-16 object-contain">
                                     </div>
                                 </div>
-                                <p class="text-white text-base font-bold mb-4">Discovery Partner Institute (DPI)</p>
-                                <p class="text-gray-300 text-sm leading-relaxed">
+                                <p class="text-gray-800 text-base font-bold mb-4">Discovery Partner Institute (DPI)</p>
+                                <p class="text-gray-600 text-sm leading-relaxed">
                                     Led a 9-member team to develop an AI and LLM-powered tool for project and grant tracking at DPI, leveraging AI algorithms and Python web scraping to increase grant relevancy and effectiveness by 30%.
                                 </p>
-                                <p class="text-gray-300 text-sm leading-relaxed mt-2">
+                                <p class="text-gray-600 text-sm leading-relaxed mt-2">
                                     Designed and deployed a comprehensive data extraction and summarization system using Azure Chat OpenAI, advanced NLP models, and PDF extraction, enhancing data retrieval accuracy by 40% and halving processing time.
                                 </p>
-                                <p class="text-gray-300 text-sm leading-relaxed mt-4">
+                                <p class="text-gray-600 text-sm leading-relaxed mt-4">
                                     Our work was recognized and featured in an article by the Gies College of Business. 
                                     <a href="https://giesbusiness.illinois.edu/news/2024/08/26/gies-msba-students-create-innovative-ai-tool-to-streamline-industry-academia-collaboration" 
                                        target="_blank" 
@@ -321,20 +332,20 @@
                                         <img src="assets/HH.png" alt="Horizon Hobby" class="w-16 h-16 object-contain">
                                     </div>
                                 </div>
-                                <p class="text-white text-base font-bold mb-4">Horizon Hobby</p>
-                                <p class="text-gray-300 text-sm leading-relaxed">
+                                <p class="text-gray-800 text-base font-bold mb-4">Horizon Hobby</p>
+                                <p class="text-gray-600 text-sm leading-relaxed">
                                     Conducted an in-depth analysis of customer data using segmentation techniques to enhance targeting strategies and identify market segments, resulting in a 30% improvement in targeting efficacy.
                                 </p>
-                                <p class="text-gray-300 text-sm leading-relaxed mt-2">
+                                <p class="text-gray-600 text-sm leading-relaxed mt-2">
                                     Developed and implemented tailored marketing strategies for identified segments, including textual analysis of product descriptions, which refined customer personas and significantly boosted business growth.
                                 </p>
                             </div>
                         </div>
                         <div class="w-[45%]">
                             <div class="max-w-sm ml-[-6rem]">
-                                <h3 class="text-2xl font-bold text-white">Student Consultant</h3>
+                                <h3 class="text-2xl font-bold text-gray-800">Student Consultant</h3>
                                 <p class="text-blue-400">August 2023 - May 2024</p>
-                                <p class="text-gray-400">Champaign, IL</p>
+                                <p class="text-gray-600">Champaign, IL</p>
                             </div>
                         </div>
                     </div>
@@ -343,9 +354,9 @@
                     <div class="flex items-start justify-between">
                         <div class="w-[45%] flex flex-col items-end">
                             <div class="max-w-sm text-right mr-[-6rem]">
-                                <h3 class="text-2xl font-bold text-white">Software Engineer/Analyst</h3>
+                                <h3 class="text-2xl font-bold text-gray-800">Software Engineer/Analyst</h3>
                                 <p class="text-blue-400">March 2021 - November 2022</p>
-                                <p class="text-gray-400">Bangalore, India</p>
+                                <p class="text-gray-600">Bangalore, India</p>
                             </div>
                         </div>
                         <div class="w-[45%]">
@@ -355,8 +366,8 @@
                                         <img src="assets/Capgemini-Logo.wine.png" alt="Capgemini" class="w-16 h-16 object-contain">
                                     </div>
                                 </div>
-                                <p class="text-white text-base font-bold mb-4">Capgemini</p>
-                                <p class="text-gray-300 text-sm leading-relaxed">
+                                <p class="text-gray-800 text-base font-bold mb-4">Capgemini</p>
+                                <p class="text-gray-600 text-sm leading-relaxed">
                                     Developed a new feature for the devlink project, boosting productivity for Intel's internal teams. Leveraged Tableau and Excel to track productivity metrics and conduct impact analysis.
                                 </p>
                                 <!-- Rest of Capgemini content -->
@@ -373,20 +384,20 @@
                                         <img src="assets/RRVPNL.webp" alt="RVPN" class="w-16 h-16 object-contain">
                                     </div>
                                 </div>
-                                <p class="text-white text-base font-bold mb-4">Rajasthan Vidyut Prasaran Nigam(RVPN)</p>
-                                <p class="text-gray-300 text-sm leading-relaxed">
+                                <p class="text-gray-800 text-base font-bold mb-4">Rajasthan Vidyut Prasaran Nigam(RVPN)</p>
+                                <p class="text-gray-600 text-sm leading-relaxed">
                                     Collaborated on SLDC operations, utilizing real-time data from multiple sub-load stations to ensure effective, efficient and transparent power system control and safeguard electrical grid stability.
                                 </p>
-                                <p class="text-gray-300 text-sm leading-relaxed mt-2">
+                                <p class="text-gray-600 text-sm leading-relaxed mt-2">
                                     Successfully completed a comprehensive training program on SCADA systems, gaining in-depth knowledge and practical experience in system monitoring and control.
                                 </p>
                             </div>
                         </div>
                         <div class="w-[45%]">
                             <div class="max-w-sm ml-[-6rem]">
-                                <h3 class="text-2xl font-bold text-white">Intern</h3>
+                                <h3 class="text-2xl font-bold text-gray-800">Intern</h3>
                                 <p class="text-blue-400">June 2019</p>
-                                <p class="text-gray-400">Jaipur, Rajasthan, India</p>
+                                <p class="text-gray-600">Jaipur, Rajasthan, India</p>
                             </div>
                         </div>
                     </div>
@@ -395,9 +406,9 @@
                     <div class="flex items-start justify-between">
                         <div class="w-[45%] flex flex-col items-end">
                             <div class="max-w-sm text-right mr-[-6rem]">
-                                <h3 class="text-2xl font-bold text-white">Intern</h3>
+                                <h3 class="text-2xl font-bold text-gray-800">Intern</h3>
                                 <p class="text-blue-400">December 2018</p>
-                                <p class="text-gray-400">Panchkula, Haryana, India</p>
+                                <p class="text-gray-600">Panchkula, Haryana, India</p>
                             </div>
                         </div>
                         <div class="w-[45%]">
@@ -407,8 +418,8 @@
                                         <img src="assets/Bharat_Electronics.webp" alt="Bharat Electronics" class="w-16 h-16 object-contain">
                                     </div>
                                 </div>
-                                <p class="text-white text-base font-bold mb-4">Bharat Electronics Private Ltd.</p>
-                                <p class="text-gray-300 text-sm leading-relaxed">
+                                <p class="text-gray-800 text-base font-bold mb-4">Bharat Electronics Private Ltd.</p>
+                                <p class="text-gray-600 text-sm leading-relaxed">
                                     Researched and analyzed SMD technology and electronic systems utilized in the defence sector during the internship at Bharat Electronics Limited, gaining valuable knowledge and understanding of cutting-edge technologies.
                                 </p>
                                 <!-- Rest of Bharat Electronics content -->
@@ -426,24 +437,25 @@
             <h2 class="text-4xl font-semibold mb-6">Academic Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- NBA Analytics Project -->
-                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-                    <div class="h-48 bg-gray-700 relative overflow-hidden">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
+                    <div class="h-48 bg-white relative overflow-hidden">
                         <img src="assets/nba.webp" alt="NBA Analytics" class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-4">Real-Time NBA Data Analytics Pipeline</h3>
-                        <p class="text-gray-300 mb-4">Developed a data pipeline using Apache Kafka, Apache Spark, and InfluxDB to analyze live NBA game statistics. Created interactive Grafana dashboards for real-time updates and insights, boosting fan engagement and supporting gameplay decisions.</p>
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Real-Time NBA Data Analytics Pipeline</h3>
+                        <p class="text-gray-700 mb-4">
+                            Developed a data pipeline using Apache Kafka, Apache Spark, and InfluxDB to analyze live NBA game statistics. Created interactive Grafana dashboards for real-time updates and insights, boosting fan engagement and supporting gameplay decisions.
+                        </p>
+                        <!-- Technology Tags -->
                         <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 text-sm bg-blue-900/50 text-blue-300 rounded-full">Apache Kafka</span>
-                            <span class="px-3 py-1 text-sm bg-orange-900/50 text-orange-300 rounded-full">Apache Spark</span>
-                            <span class="px-3 py-1 text-sm bg-green-900/50 text-green-300 rounded-full">InfluxDB</span>
-                            <span class="px-3 py-1 text-sm bg-purple-900/50 text-purple-300 rounded-full">Grafana</span>
-                            <span class="px-3 py-1 text-sm bg-yellow-900/50 text-yellow-300 rounded-full">Python</span>
+                            <span class="px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded-full">Apache Kafka</span>
+                            <span class="px-3 py-1 text-sm bg-orange-100 text-orange-700 rounded-full">Apache Spark</span>
+                            <span class="px-3 py-1 text-sm bg-green-100 text-green-700 rounded-full">InfluxDB</span>
+                            <span class="px-3 py-1 text-sm bg-purple-100 text-purple-700 rounded-full">Grafana</span>
+                            <span class="px-3 py-1 text-sm bg-yellow-100 text-yellow-700 rounded-full">Python</span>
                         </div>
                         <a href="https://github.com/panshul24/Real-Time-NBA-Data-Analytics-Pipeline" 
-                           class="inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
-                           target="_blank"
-                           rel="noopener noreferrer">
+                           class="inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">
                             <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
@@ -453,25 +465,27 @@
                 </div>
 
                 <!-- Visual Analytics for Blockchain Sales -->
-                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-                    <div class="h-48 bg-gray-700 relative overflow-hidden">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
+                    <div class="h-48 bg-white relative overflow-hidden">
                         <img src="assets/visualanlytics.webp" alt="Blockchain Analytics" class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-4">Visual Analytics for Blockchain Sales</h3>
-                        <p class="text-gray-300 mb-4">Developed visual analytics tools to track and analyze blockchain sales data, providing insights into market trends and sales performance.</p>
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Visual Analytics for Blockchain Sales</h3>
+                        <p class="text-gray-700 mb-4">
+                            Developed visual analytics tools to track and analyze blockchain sales data, providing insights into market trends and sales performance.
+                        </p>
                         
                         <!-- Dashboard Links Section -->
-                        <div class="mb-6 p-4 bg-gray-900/50 rounded-lg">
-                            <h4 class="text-lg font-semibold text-white mb-3">Interactive Dashboards</h4>
-                            <div class="space-y-3">
+                        <div class="mb-6 bg-gray-50 rounded-lg">
+                            <h4 class="text-lg font-semibold text-gray-800 p-4">Interactive Dashboards</h4>
+                            <div class="space-y-1">
                                 <a href="https://flipsidecrypto.xyz/gp12/team-12-mini-project-2-bayc-analysis-aUB_gv" 
                                    target="_blank"
                                    rel="noopener noreferrer"
-                                   class="block p-3 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-colors group">
-                                    <div class="flex items-center justify-between">
-                                        <span class="text-blue-400 group-hover:text-blue-300">BAYC NFT Analysis Dashboard</span>
-                                        <svg class="w-4 h-4 text-blue-400 group-hover:text-blue-300 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                   class="block p-4 hover:bg-gray-100 transition-colors">
+                                    <div class="flex items-center justify-between text-blue-600">
+                                        <span>BAYC NFT Analysis Dashboard</span>
+                                        <svg class="w-4 h-4 transform transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                         </svg>
                                     </div>
@@ -480,10 +494,10 @@
                                 <a href="https://flipsidecrypto.xyz/panshul3/mini_project2_extra_credit_cryptopunks-aZ9vKg" 
                                    target="_blank"
                                    rel="noopener noreferrer"
-                                   class="block p-3 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-colors group">
-                                    <div class="flex items-center justify-between">
-                                        <span class="text-blue-400 group-hover:text-blue-300">CryptoPunks Market Analysis</span>
-                                        <svg class="w-4 h-4 text-blue-400 group-hover:text-blue-300 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                   class="block p-4 hover:bg-gray-100 transition-colors">
+                                    <div class="flex items-center justify-between text-blue-600">
+                                        <span>CryptoPunks Market Analysis</span>
+                                        <svg class="w-4 h-4 transform transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                         </svg>
                                     </div>
@@ -492,10 +506,10 @@
                                 <a href="https://flipsidecrypto.xyz/gp12/team-12-miniproject2-fidenza-analysis-J3l7Rv" 
                                    target="_blank"
                                    rel="noopener noreferrer"
-                                   class="block p-3 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-colors group">
-                                    <div class="flex items-center justify-between">
-                                        <span class="text-blue-400 group-hover:text-blue-300">Fidenza NFT Market Insights</span>
-                                        <svg class="w-4 h-4 text-blue-400 group-hover:text-blue-300 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                   class="block p-4 hover:bg-gray-100 transition-colors">
+                                    <div class="flex items-center justify-between text-blue-600">
+                                        <span>Fidenza NFT Market Insights</span>
+                                        <svg class="w-4 h-4 transform transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                         </svg>
                                     </div>
@@ -504,16 +518,14 @@
                         </div>
 
                         <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 text-sm bg-blue-900/50 text-blue-300 rounded-full">Python</span>
-                            <span class="px-3 py-1 text-sm bg-green-900/50 text-green-300 rounded-full">D3.js</span>
-                            <span class="px-3 py-1 text-sm bg-yellow-900/50 text-yellow-300 rounded-full">Web3.py</span>
-                            <span class="px-3 py-1 text-sm bg-purple-900/50 text-purple-300 rounded-full">SQL</span>
-                            <span class="px-3 py-1 text-sm bg-red-900/50 text-red-300 rounded-full">Tableau</span>
+                            <span class="px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded-full">Python</span>
+                            <span class="px-3 py-1 text-sm bg-green-100 text-green-700 rounded-full">D3.js</span>
+                            <span class="px-3 py-1 text-sm bg-yellow-100 text-yellow-700 rounded-full">Web3.py</span>
+                            <span class="px-3 py-1 text-sm bg-purple-100 text-purple-700 rounded-full">SQL</span>
+                            <span class="px-3 py-1 text-sm bg-red-100 text-red-700 rounded-full">Tableau</span>
                         </div>
                         <a href="https://github.com/panshul24/Visual-Analytics-for-Blockchain-Sales" 
-                           class="inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
-                           target="_blank"
-                           rel="noopener noreferrer">
+                           class="inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">
                             <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
@@ -523,24 +535,22 @@
                 </div>
 
                 <!-- Statistical Modeling Project -->
-                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-                    <div class="h-48 bg-gray-700 relative overflow-hidden">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
+                    <div class="h-48 bg-white relative overflow-hidden">
                         <img src="assets/stastical.webp" alt="Property Valuation" class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-4">Statistical Modeling for Property Valuation</h3>
-                        <p class="text-gray-300 mb-4">Conducted data cleaning to handle missing values, outliers, and inconsistencies, and identified factors influencing housing prices. Used Lasso regression to predict housing prices, achieving an accuracy of 92%.</p>
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Statistical Modeling for Property Valuation</h3>
+                        <p class="text-gray-700 mb-4">Conducted data cleaning to handle missing values, outliers, and inconsistencies, and identified factors influencing housing prices. Used Lasso regression to predict housing prices, achieving an accuracy of 92%.</p>
                         <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 text-sm bg-blue-900/50 text-blue-300 rounded-full">Python</span>
-                            <span class="px-3 py-1 text-sm bg-green-900/50 text-green-300 rounded-full">Scikit-learn</span>
-                            <span class="px-3 py-1 text-sm bg-yellow-900/50 text-yellow-300 rounded-full">Pandas</span>
-                            <span class="px-3 py-1 text-sm bg-purple-900/50 text-purple-300 rounded-full">NumPy</span>
-                            <span class="px-3 py-1 text-sm bg-red-900/50 text-red-300 rounded-full">Matplotlib</span>
+                            <span class="px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded-full">Python</span>
+                            <span class="px-3 py-1 text-sm bg-green-100 text-green-700 rounded-full">Scikit-learn</span>
+                            <span class="px-3 py-1 text-sm bg-yellow-100 text-yellow-700 rounded-full">Pandas</span>
+                            <span class="px-3 py-1 text-sm bg-purple-100 text-purple-700 rounded-full">NumPy</span>
+                            <span class="px-3 py-1 text-sm bg-red-100 text-red-700 rounded-full">Matplotlib</span>
                         </div>
                         <a href="https://github.com/panshul24/Statistical-Modeling-for-Property-Valuation" 
-                           class="inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
-                           target="_blank"
-                           rel="noopener noreferrer">
+                           class="inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">
                             <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
@@ -549,24 +559,22 @@
                     </div>
                 </div>
 
-                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-                    <div class="h-48 bg-gray-700 relative overflow-hidden">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
+                    <div class="h-48 bg-white relative overflow-hidden">
                         <img src="assets/yelp.webp" alt="Yelp Analysis" class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-4">Yelp Dataset ETL and Analysis</h3>
-                        <p class="text-gray-300 mb-4">Implemented an ETL process to extract, transform, and load Yelp data for analysis, providing insights into customer reviews and business performance.</p>
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Yelp Dataset ETL and Analysis</h3>
+                        <p class="text-gray-700 mb-4">Implemented an ETL process to extract, transform, and load Yelp data for analysis, providing insights into customer reviews and business performance.</p>
                         <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 text-sm bg-blue-900/50 text-blue-300 rounded-full">Python</span>
-                            <span class="px-3 py-1 text-sm bg-green-900/50 text-green-300 rounded-full">Apache Spark</span>
-                            <span class="px-3 py-1 text-sm bg-yellow-900/50 text-yellow-300 rounded-full">PostgreSQL</span>
-                            <span class="px-3 py-1 text-sm bg-purple-900/50 text-purple-300 rounded-full">NLTK</span>
-                            <span class="px-3 py-1 text-sm bg-red-900/50 text-red-300 rounded-full">Pandas</span>
+                            <span class="px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded-full">Python</span>
+                            <span class="px-3 py-1 text-sm bg-green-100 text-green-700 rounded-full">Apache Spark</span>
+                            <span class="px-3 py-1 text-sm bg-yellow-100 text-yellow-700 rounded-full">PostgreSQL</span>
+                            <span class="px-3 py-1 text-sm bg-purple-100 text-purple-700 rounded-full">NLTK</span>
+                            <span class="px-3 py-1 text-sm bg-red-100 text-red-700 rounded-full">Pandas</span>
                         </div>
                         <a href="https://github.com/panshul24/Yelp-Dataset-ETL-and-Analysis" 
-                           class="inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
-                           target="_blank"
-                           rel="noopener noreferrer">
+                           class="inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">
                             <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
@@ -575,24 +583,22 @@
                     </div>
                 </div>
 
-                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-                    <div class="h-48 bg-gray-700 relative overflow-hidden">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
+                    <div class="h-48 bg-white relative overflow-hidden">
                         <img src="assets/Cloud-Optimized Data Ecosystem Project Integration .webp" alt="Cloud Ecosystem" class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-4">Cloud-Optimized Data Ecosystem Project Integration</h3>
-                        <p class="text-gray-300 mb-4">Implemented scalable MongoDB clusters on the cloud for efficient data storage and management. Integrated Yelp data from Kaggle and real-time NFT sales data from Flipside via a Python API, improving data-driven decision-making by 30%.</p>
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Cloud-Optimized Data Ecosystem Project Integration</h3>
+                        <p class="text-gray-700 mb-4">Implemented scalable MongoDB clusters on the cloud for efficient data storage and management. Integrated Yelp data from Kaggle and real-time NFT sales data from Flipside via a Python API, improving data-driven decision-making by 30%.</p>
                         <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 text-sm bg-blue-900/50 text-blue-300 rounded-full">MongoDB</span>
-                            <span class="px-3 py-1 text-sm bg-green-900/50 text-green-300 rounded-full">AWS</span>
-                            <span class="px-3 py-1 text-sm bg-yellow-900/50 text-yellow-300 rounded-full">Python</span>
-                            <span class="px-3 py-1 text-sm bg-purple-900/50 text-purple-300 rounded-full">Docker</span>
-                            <span class="px-3 py-1 text-sm bg-red-900/50 text-red-300 rounded-full">Kubernetes</span>
+                            <span class="px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded-full">MongoDB</span>
+                            <span class="px-3 py-1 text-sm bg-green-100 text-green-700 rounded-full">AWS</span>
+                            <span class="px-3 py-1 text-sm bg-yellow-100 text-yellow-700 rounded-full">Python</span>
+                            <span class="px-3 py-1 text-sm bg-purple-100 text-purple-700 rounded-full">Docker</span>
+                            <span class="px-3 py-1 text-sm bg-red-100 text-red-700 rounded-full">Kubernetes</span>
                         </div>
                         <a href="https://github.com/panshul24/Cloud-Optimized-Data-Ecosystem-Project-Integration" 
-                           class="inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
-                           target="_blank"
-                           rel="noopener noreferrer">
+                           class="inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">
                             <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
@@ -601,24 +607,22 @@
                     </div>
                 </div>
 
-                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-                    <div class="h-48 bg-gray-700 relative overflow-hidden">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
+                    <div class="h-48 bg-white relative overflow-hidden">
                         <img src="assets/Success of an IPO.webp" alt="IPO Analysis" class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-4">Determining the Success of an IPO</h3>
-                        <p class="text-gray-300 mb-4">Analyzed factors contributing to the success of IPOs using historical data and statistical models to predict future performance.</p>
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Determining the Success of an IPO</h3>
+                        <p class="text-gray-700 mb-4">Analyzed factors contributing to the success of IPOs using historical data and statistical models to predict future performance.</p>
                         <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 text-sm bg-blue-900/50 text-blue-300 rounded-full">Python</span>
-                            <span class="px-3 py-1 text-sm bg-green-900/50 text-green-300 rounded-full">R</span>
-                            <span class="px-3 py-1 text-sm bg-yellow-900/50 text-yellow-300 rounded-full">SQL</span>
-                            <span class="px-3 py-1 text-sm bg-purple-900/50 text-purple-300 rounded-full">Tableau</span>
-                            <span class="px-3 py-1 text-sm bg-red-900/50 text-red-300 rounded-full">Machine Learning</span>
+                            <span class="px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded-full">Python</span>
+                            <span class="px-3 py-1 text-sm bg-green-100 text-green-700 rounded-full">R</span>
+                            <span class="px-3 py-1 text-sm bg-yellow-100 text-yellow-700 rounded-full">SQL</span>
+                            <span class="px-3 py-1 text-sm bg-purple-100 text-purple-700 rounded-full">Tableau</span>
+                            <span class="px-3 py-1 text-sm bg-red-100 text-red-700 rounded-full">Machine Learning</span>
                         </div>
                         <a href="https://github.com/panshul24/Determining-the-Success-of-an-IPO" 
-                           class="inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
-                           target="_blank"
-                           rel="noopener noreferrer">
+                           class="inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">
                             <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
@@ -627,24 +631,22 @@
                     </div>
                 </div>
 
-                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-                    <div class="h-48 bg-gray-700 relative overflow-hidden flex items-center justify-center">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
+                    <div class="h-48 bg-white relative overflow-hidden flex items-center justify-center">
                         <img src="assets/DPI.webp" alt="DPI Project" class="w-[90%] h-[90%] object-cover">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-4">Discovery Partner Institute (DPI)</h3>
-                        <p class="text-gray-300 mb-4">Developed tools for project and grant tracking, enhancing grant relevancy and effectiveness by 30% using AI and LLM-powered solutions.</p>
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Discovery Partner Institute (DPI)</h3>
+                        <p class="text-gray-700 mb-4">Developed tools for project and grant tracking, enhancing grant relevancy and effectiveness by 30% using AI and LLM-powered solutions.</p>
                         <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 text-sm bg-blue-900/50 text-blue-300 rounded-full">Python</span>
-                            <span class="px-3 py-1 text-sm bg-green-900/50 text-green-300 rounded-full">OpenAI</span>
-                            <span class="px-3 py-1 text-sm bg-yellow-900/50 text-yellow-300 rounded-full">Azure</span>
-                            <span class="px-3 py-1 text-sm bg-purple-900/50 text-purple-300 rounded-full">LangChain</span>
-                            <span class="px-3 py-1 text-sm bg-red-900/50 text-red-300 rounded-full">FastAPI</span>
+                            <span class="px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded-full">Python</span>
+                            <span class="px-3 py-1 text-sm bg-green-100 text-green-700 rounded-full">OpenAI</span>
+                            <span class="px-3 py-1 text-sm bg-yellow-100 text-yellow-700 rounded-full">Azure</span>
+                            <span class="px-3 py-1 text-sm bg-purple-100 text-purple-700 rounded-full">LangChain</span>
+                            <span class="px-3 py-1 text-sm bg-red-100 text-red-700 rounded-full">FastAPI</span>
                         </div>
                         <a href="https://github.com/panshul24/Discovery-Partner-Institute-DPI-" 
-                           class="inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
-                           target="_blank"
-                           rel="noopener noreferrer">
+                           class="inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">
                             <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
@@ -653,24 +655,22 @@
                     </div>
                 </div>
 
-                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-                    <div class="h-48 bg-gray-700 relative overflow-hidden">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
+                    <div class="h-48 bg-white relative overflow-hidden">
                         <img src="assets/Energy.webp" alt="Energy Analysis" class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-4">Energy Production Trends Analysis</h3>
-                        <p class="text-gray-300 mb-4">Analyzed energy production data to identify trends and patterns, providing insights into renewable energy sources and their impact on the market.</p>
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Energy Production Trends Analysis</h3>
+                        <p class="text-gray-700 mb-4">Analyzed energy production data to identify trends and patterns, providing insights into renewable energy sources and their impact on the market.</p>
                         <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 text-sm bg-blue-900/50 text-blue-300 rounded-full">Python</span>
-                            <span class="px-3 py-1 text-sm bg-green-900/50 text-green-300 rounded-full">Pandas</span>
-                            <span class="px-3 py-1 text-sm bg-yellow-900/50 text-yellow-300 rounded-full">Matplotlib</span>
-                            <span class="px-3 py-1 text-sm bg-purple-900/50 text-purple-300 rounded-full">Seaborn</span>
-                            <span class="px-3 py-1 text-sm bg-red-900/50 text-red-300 rounded-full">Scikit-learn</span>
+                            <span class="px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded-full">Python</span>
+                            <span class="px-3 py-1 text-sm bg-green-100 text-green-700 rounded-full">Pandas</span>
+                            <span class="px-3 py-1 text-sm bg-yellow-100 text-yellow-700 rounded-full">Matplotlib</span>
+                            <span class="px-3 py-1 text-sm bg-purple-100 text-purple-700 rounded-full">Seaborn</span>
+                            <span class="px-3 py-1 text-sm bg-red-100 text-red-700 rounded-full">Scikit-learn</span>
                         </div>
                         <a href="https://github.com/panshul24/Energy-Production-Trends-Analysis" 
-                           class="inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
-                           target="_blank"
-                           rel="noopener noreferrer">
+                           class="inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">
                             <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
@@ -683,43 +683,27 @@
     </div>
     
     <div class="section" id="leadership">
-        <div id="particles-leadership" class="fixed top-0 left-0 w-full h-full -z-10"></div>
-        <div class="container mx-auto py-20">
-            <h2 class="text-4xl font-semibold mb-6">Leadership & Publications</h2>
-            <ul class="space-y-4">
-                <li class="leadership-item p-4 rounded-lg">
-                    <strong>Featured Project: AI Tool for Streamlining Industry-Academia Collaboration</strong><br>
-                    As part of the Gies MSBA program, I led the development of an innovative AI-powered tool designed to streamline collaboration between industry and academia. This project involved leveraging advanced AI models, including natural language processing and vector storage technologies, to enhance efficiency in project and grant management.<br><br>
-                    Our work was recognized and featured in an article by the Gies College of Business. 
-                    <a href="https://giesbusiness.illinois.edu/news/2024/08/26/gies-msba-students-create-innovative-ai-tool-to-streamline-industry-academia-collaboration" 
-                       target="_blank" 
-                       rel="noopener noreferrer" 
-                       class="text-blue-400 hover:text-blue-300 underline">
-                        Read more about the project here
-                    </a>
-                </li>
-                <li class="leadership-item p-4 rounded-lg">
-                    <strong>Gies College of Business - MSBA Student Leadership Council</strong><br>
-                    Acted as a liaison for over 100 students, resolving conflicts and creating a support system that provided academic resources to enhance student success.
-                </li>
-                <li class="leadership-item p-4 rounded-lg">
-                    <strong>
-                        <a href="https://ieeexplore.ieee.org/abstract/document/10157050" 
-                           target="_blank" 
-                           rel="noopener noreferrer" 
-                           class="text-inherit hover:text-blue-300">
-                            Design and Implementation of Approximate Divider For Error-Resilient Image Processing Applications
-                        </a>
-                    </strong><br>
-                    Presented a research paper at the IEEE-sponsored conference on the design and implementation of an approximate divider for error-resilient image processing applications, utilizing Cadence Virtuoso, MODELSIM, and MATLAB for VLSI circuit design.<br><br>
-                    <a href="https://ieeexplore.ieee.org/abstract/document/10157050" 
-                       target="_blank" 
-                       rel="noopener noreferrer" 
-                       class="text-blue-400 hover:text-blue-300 underline">
-                        Click here to read the full paper
-                    </a>
-                </li>
-            </ul>
+        <div class="container">
+            <h2>Leadership & Publications</h2>
+            
+            <div class="featured-project">
+                <h3>Featured Project: AI Tool for Streamlining Industry-Academia Collaboration</h3>
+                <p>As part of the Gies MSBA program, I led the development of an innovative AI-powered tool designed to streamline collaboration between industry and academia. This project involved leveraging advanced AI models, including natural language processing and vector storage technologies, to enhance efficiency in project and grant management.</p>
+                <p>Our work was recognized and featured in an article by the Gies College of Business. 
+                    <a href="https://giesbusiness.illinois.edu/news/2024/08/26/gies-msba-students-create-innovative-ai-tool-to-streamline-industry-academia-collaboration" target="_blank" rel="noopener noreferrer">Read more about the project here</a>
+                </p>
+            </div>
+
+            <div class="leadership-item">
+                <h3>Gies College of Business - MSBA Student Leadership Council</h3>
+                <p>Acted as a liaison for over 100 students, resolving conflicts and creating a support system that provided academic resources to enhance student success.</p>
+            </div>
+
+            <div class="leadership-item">
+                <h3>Design and Implementation of Approximate Divider For Error-Resilient Image Processing Applications</h3>
+                <p>Presented a research paper at the IEEE-sponsored conference on the design and implementation of an approximate divider for error-resilient image processing applications, utilizing Cadence Virtuoso, MODELSIM, and MATLAB for VLSI circuit design.</p>
+                <p><a href="https://ieeexplore.ieee.org/abstract/document/10157050" target="_blank" rel="noopener noreferrer">Click here to read the full paper</a></p>
+            </div>
         </div>
     </div>
     
@@ -770,26 +754,26 @@
                     <h3 class="text-2xl font-semibold mb-4">Panshul Saraswat</h3>
                     <div class="space-y-4">
                         <div>
-                            <h4 class="text-gray-400 mb-1">Email</h4>
+                            <h4 class="text-gray-600 mb-1">Email</h4>
                             <a href="mailto:panshul590@gmail.com" class="text-blue-500 hover:underline">panshul590@gmail.com</a>
                         </div>
                         <div>
-                            <h4 class="text-gray-400 mb-1">Location</h4>
+                            <h4 class="text-gray-600 mb-1">Location</h4>
                             <p>Champaign, IL</p>
                         </div>
                         <div>
-                            <h4 class="text-gray-400 mb-1">Phone</h4>
+                            <h4 class="text-gray-600 mb-1">Phone</h4>
                             <p>(+1) 217-904-2035</p>
                         </div>
                         <div class="pt-4">
                             <div class="flex space-x-4">
-                                <a href="https://github.com/panshul24" target="_blank" class="text-gray-400 hover:text-white">
+                                <a href="https://github.com/panshul24" target="_blank" class="text-gray-600 hover:text-gray-800">
                                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                                 </a>
-                                <a href="https://www.linkedin.com/in/panshul-saraswat/" target="_blank" class="text-gray-400 hover:text-white">
-                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                <a href="https://www.linkedin.com/in/panshul-saraswat/" target="_blank" class="text-gray-600 hover:text-gray-800">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.75-1.764 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                                 </a>
-                                <a href="mailto:panshul590@gmail.com" class="text-gray-400 hover:text-white">
+                                <a href="mailto:panshul590@gmail.com" class="text-gray-600 hover:text-gray-800">
                                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/></svg>
                                 </a>
                             </div>
@@ -800,7 +784,7 @@
         </div>
     </div>
     
-    <footer class="bg-gray-800 text-white py-6">
+    <footer class="bg-gray-100 text-gray-800 py-6">
         <div class="container mx-auto text-center">
             <p>&copy; 2024 Panshul Saraswat</p>
         </div>

@@ -1,4 +1,29 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Hamburger menu functionality
+    const hamburgerButton = document.getElementById('hamburger-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    hamburgerButton.addEventListener('click', function() {
+        this.classList.toggle('hamburger-active');
+        mobileMenu.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburgerButton.classList.remove('hamburger-active');
+            mobileMenu.classList.remove('active');
+        });
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!hamburgerButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+            hamburgerButton.classList.remove('hamburger-active');
+            mobileMenu.classList.remove('active');
+        }
+    });
+
     // Particle configuration
     const particleConfig = {
         particles: {
@@ -10,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             },
             color: {
-                value: "#4a90e2"
+                value: '#333333'
             },
             shape: {
                 type: "circle"
